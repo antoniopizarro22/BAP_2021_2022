@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.10) (preloaded format=xelatex 2021.10.31)  31 OCT 2021 19:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.10) (preloaded format=xelatex 2021.10.31)  31 OCT 2021 19:29
 entering extended mode
 **./naam_voornaam_voorstel.tex
 (naam_voornaam_voorstel.tex
@@ -1086,10 +1086,10 @@ Package logreq Info: Writing requests to 'naam_voornaam_voorstel.run.xml'.
 Here is how much of TeX's memory you used:
  23655 strings out of 411275
  401539 string characters out of 2835481
- 1410703 words of memory out of 3000000
+ 1410698 words of memory out of 3000000
  43794 multiletter control sequences out of 15000+600000
  428798 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  75i,12n,81p,757b,5348s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on naam_voornaam_voorstel.xdv (1 page, 38072 bytes).
+Output written on naam_voornaam_voorstel.xdv (1 page, 38020 bytes).
