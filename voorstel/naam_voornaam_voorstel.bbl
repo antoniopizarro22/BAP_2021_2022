@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Doll1954}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=42f5dae45a7412f89d24f542563044fd}{%
+           family={Doll},
+           familyi={D\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e1b5f6d428a15891ee4aa38fe6bcb5f}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={A\bibnamedelima Bradford},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1fd9cadc939878dcee2a257ce0b00a12}
+      \strng{fullhash}{1fd9cadc939878dcee2a257ce0b00a12}
+      \strng{bibnamehash}{1fd9cadc939878dcee2a257ce0b00a12}
+      \strng{authorbibnamehash}{1fd9cadc939878dcee2a257ce0b00a12}
+      \strng{authornamehash}{1fd9cadc939878dcee2a257ce0b00a12}
+      \strng{authorfullhash}{1fd9cadc939878dcee2a257ce0b00a12}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{British Medical Journal}
+      \field{number}{7455}
+      \field{title}{The mortality of doctors in relation to their smoking habits: a preliminary report}
+      \field{volume}{328}
+      \field{year}{1954}
+      \field{pages}{1529\bibrangedash 1533}
+      \range{pages}{5}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
