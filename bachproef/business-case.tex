@@ -1,0 +1,29 @@
+%%=============================================================================
+%% Business case
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Business case}{Business case}}
+\label{ch:business-case}
+
+\section{Functionele requirements}
+\label{sec:functionele-requirements}
+
+\begin{itemize}
+    \item Een opslagplaats waar bestanden langdurig en veilig kunnen bewaard worden.
+    \item De metadata van de bewaarde bestanden wordt automatisch opgeslagen.
+    \item Een API-service om de metadata van de bewaarde bestanden te kunnen raadplegen en/of te bewerken.
+\end{itemize}
+
+\section{AWS Serverless oplossing}
+\label{sec:serverless-oplossing}
+
+De serverless oplossing bestaan uit de volgende AWS-resources:
+
+\begin{description}
+    \item[AWS S3 bucket] opslag voor de bestanden
+    \item[AWS Lambda functie 1] S3 events verwerker - bij het toevoegen van een bestand aan de S3 bucket
+    \item[AWS Lambda functie 2] Backend voor de API-gateway, verwerker van de API-calls
+    \item[AWS API-gateway] API-service voor het raadplegen of bewerken van de metadata
+    \item[AWS DynamoDB] NoSQL databank voor het opslaan van de metadata
+\end{description}
+

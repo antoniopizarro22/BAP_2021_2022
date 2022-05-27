@@ -11,17 +11,17 @@
 % TODO: Vul dit aan met je eigen info:
 
 % De titel van het rapport/bachelorproef
-\title{Titel}
+\title{Infrastructure as Code op AWS: analyse en vergelijkende studie van de beschikbare services}
 
 % Je eigen naam
-\author{Steven Stevens}
+\author{Antonio Pizarro}
 
 % De naam van je promotor (lector van de opleiding)
-\promotor{Jan Janssens}
+\promotor{Gertjan Bosteels}
 
 % De naam van je co-promotor. Als je promotor ook je opdrachtgever is en je
 % dus ook inhoudelijk begeleidt (en enkel dan!), mag je dit leeg laten.
-\copromotor{Piet Pieters}
+\copromotor{Sander Adam}
 
 % Indien je bachelorproef in opdracht van/in samenwerking met een bedrijf of
 % externe organisatie geschreven is, geef je hier de naam. Zoniet laat je dit
@@ -29,13 +29,13 @@
 \instelling{---}
 
 % Academiejaar
-\academiejaar{2018-2019}
+\academiejaar{2021-2022}
 
 % Examenperiode
 %  - 1e semester = 1e examenperiode => 1
 %  - 2e semester = 2e examenperiode => 2
 %  - tweede zit  = 3e examenperiode => 3
-\examenperiode{2}
+\examenperiode{3}
 
 %===============================================================================
 % Inhoud document
@@ -76,6 +76,7 @@
 
 \listoffigures
 \listoftables
+\lstlistoflistings
 
 % Als je een lijst van afkortingen of termen wil toevoegen, dan hoort die
 % hier thuis. Gebruik bijvoorbeeld de ``glossaries'' package.
@@ -90,8 +91,12 @@
 % te verspreiden!
 
 \input{inleiding}
-\input{standvanzaken}
-\input{methodologie}
+% TODO: literatuurstudie + wat anderen denken
+\input{standvanzaken} % console-based services/tools eerst uitschrijven -
+\input{methodologie} % beschrijving criteria + literatuurstudie -> vergelijking ->  op basis van business case + criteria -> uitwerking
+\input{vergelijking} % alle services/tools + magic quadrant
+\input{business-case} % beschrijving ondenming + business case -- oplossing komt hier niet
+\input{uitwerking} % selectie + oplossing Cloudformation, AWS CDK
 
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
@@ -122,7 +127,8 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 %%---------- Andere bijlagen --------------------------------------------------
 % TODO: Voeg hier eventuele andere bijlagen toe
 %\input{...}
-
+%TODO: woordenlijst + afkortingen + acroniemen
+%\input{glossary}
 %%---------- Referentielijst --------------------------------------------------
 
 \printbibliography[heading=bibintoc]

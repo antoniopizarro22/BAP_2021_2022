@@ -11,5 +11,95 @@
 %% mogelijke manier toegepast hebt om een antwoord te vinden op de
 %% onderzoeksvraag.
 
-\lipsum[21-25]
+TODO Methodologie
+
+De services en tools zullen op bepaalde criteria geëvalueerd worden.
+De criteria is grotendeels afhankelijk van het type onderneming, een startup, een KBO of een grote onderneming.
+Aan de hand van een vergelijkende studie wordt er bepaald welke tool in welke situatie het best wordt gebruikt.
+
+% beschrijving criteria + literatuurstudie -> vergelijking ->  op basis van business case + criteria -> uitwerking
+
+\section{Criteria evaluatie}
+\label{sec:criteria-evaluatie}
+
+\begin{enumerate}
+    \item Initiële inzet
+    \begin{itemize}
+        \item Training
+        \item Set-up kost
+        \item Documentatie en/of support
+    \end{itemize}
+    \item Operationele effectiviteit
+    \begin{itemize}
+        \item State – Validatie – Rollback – Drift elimination
+        \item Maturiteit
+        \item Onderhoudbaarheid
+        \item Veiligheid (least privilege implementation, RBAC, transparantie)
+        \item Categorisatie (tagging, resource groups, omgevingen)
+    \end{itemize}
+    \item Gebruiksgemak/Gebruikscomfort
+    \begin{itemize}
+        \item Herbruikbaarheid
+        \item Ready-made (abstractieniveau)
+        \item Cross-platform support
+        \item Syntax
+        \item Open source
+    \end{itemize}
+    \item Total Cost of Ownership (TCO)
+    \begin{itemize}
+        \item Infrastructuur
+        \item Support
+    \end{itemize}
+    \item Flexibiliteit
+    \begin{itemize}
+        \item Integratie met een bestaande omgeving
+        \item Integratie/collaboratie met andere IaC tools
+        \item Integratie met andere DevOps tools
+        \item Integratie met andere development frameworks
+    \end{itemize}
+\end{enumerate}
+
+In de eerste plaats wordt er gekeken naar de eerste inzet die nodig is om de tool of service in gebruik te nemen.
+Dit houdt in de kosten gebonden aan het gebruik van de tool, eventuele trainingen als het gaat over een complexe tools die voorkennis vereisen.
+De documentatie is ook een grote aanwijzing voor de waarde van de tool.
+Goed gestructureerde en gesubstantieerde documentatie maakt een eerste kennismaking met de tool moeiteloos.
+
+De operationele effectiviteit van de tool wordt ook onder de loep genomen.
+De maturiteit en de onderhoudbaarheid van de tool spelen een grote rol als een gebruiker een keuze moet maken tussen de verschilleden tools.
+Een tool met een lange levensduur die nog steeds wordt onderhouden zal eerder als betrouwbaar geacht worden.
+Binnen IaC zijn er bepaalde functionaliteiten die de gebruiker op een georganiseerde manier laten werken en het beheer van de infrastructuur ondersteunen.
+Het al dan niet beschikken van deze functionaliteiten zal ook wegen bij het evalueren van de tools.
+Een aantal van deze functionaliteiten wordt hieronder beschreven.
+
+\begin{description}
+    \item[State:] De tool geeft de mogelijkheid om de status van de gereproduceerde infrastructuur op te volgen. Als er wijzigingen zouden plaatsvinden dan worden deze bij de state opgevangen.
+    \item[Validatie:] Als er sprake is van code dan wordt er verwacht dat deze aan bepaalde syntax of formaat eisen voldoet. De validatie moet ervoor zorgen dat voor het genereren van de infrastructuur de nodige meldingen worden weergegeven als iets niet klopt.
+    \item[Rollback:] De mogelijkheid om de gegenereerd infrastructuur te verwijderen of wijzigingen terug te draaien.
+    \item[Drift elimination:] De functionaliteit om afwijkingen tussen de state en de huidige implementatie te kunnen detecteren. Wijzigingen die buiten de scope van de IaC tool worden aangebracht zijn in dit geval een afwijking.
+    \item[Veiligheid:] Op vlak van veiligheid wordt er gekeken naar de functionaliteit rond toegankelijkheid. Het is van uiterst belang dat enkel toegestane gebruikers infrastructuur kunnen genereren of wijzigen. Concepten zoal least privilege, roll based access control (RBAC) en policies horen hierbij.
+    \item[Categorisatie:] Functionaliteit om infrastructuur te beheren op een ordelijke manier zoals tagging, resource groups en omgevingen.
+\end{description}
+
+Onder de categorie gebruiksgemak worden zaken zoals de herbruikbaarheid van de tool bestudeerd.
+De mogelijkheid om verschillende omgevingen te kunnen opzetten vertrekkende van dezelfde infrastructuur template.
+De complexiteit van de tool is een determinerende factor.
+Sommige tools eisen de volledige configuratie van de gedefinieerde AWS-resources.
+Andere tools vragen helemaal geen configuratie, de gebruiker moet zich dan enkel bezighouden met de ontwikkeling van de toepassing.
+Afhankelijk van het niveau van abstractie kan een tool heel complex of heel eenvoudig zijn.
+De syntax is een factor die meespeelt bij tools waar het vertrekkende punt een template of code is.
+Als de code in een programmeertaal, die niet exclusief is voor die tool, is geschreven dan moet de code voldoen aan de regels van dat programmeertaal.
+Bepaalde tools beschikken over hun eigen syntax, andere gebruiken generieke bestandsformaten zoals JSON en YML.
+
+De Total cost of ownership(TCO) is een andere belangrijke factor.
+Het budget waarover een onderneming beschikt zal ook meespelen bij de keuze van een IaC tool.
+Niet alle ondernemingen kunnen de kosten om een complexe tool te gebruiken verantwoorden, de expertise die nodig is om de tool in gebruik te nemen kan extra kosten betekenen.
+
+\section{Services en tools}
+\label{sec:services-tools}
+
+Er is een breed aanbod aan services en tools voor het opzetten van AWS-resources.
+De tools en services die verder besproken zullen worden variëren van interne AWS-services tot derde partij tools.
+De services en tools verschillen ook op vlak van complexiteit.
+Er zijn “fully managed” services die de configuratie van AWS-resources grotendeels of deels op zich nemen, de gebruiker
+kan eenvoudig toepassingen deployen en beheren zonder veel te moeten nadenken over de achterliggende resources.
 

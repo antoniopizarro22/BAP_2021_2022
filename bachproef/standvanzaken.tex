@@ -1,17 +1,204 @@
 \chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}
 \label{ch:stand-van-zaken}
 
-% Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
-% dit hoofdstuk past binnen het geheel van de bachelorproef. Geef in het
-% bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
+Infrastructure as Code (IaC) is een essentiële bouwsteen binnen de DevOps methodologie.
+De infrastructuur code wordt behandeld op dezelfde manier als een softwareontwikkelaar zijn code zou behandelen.
+Met andere woorden, de code wordt op een ordelijke manier binnen een versiebeheer systeem bewaard.
+Daarnaast moet het ook mogelijk zijn om continuous integration (CI) en continuous development (CD) toe te passen op de infrastructuur code.
+De code moet een consistent en repliceerbaar resultaat leveren die automatisatie toelaat~\autocite{Mansoor2014}.
 
-% Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
+\subsection{AWS AppRunner}
+\label{sec:service-apprunner}
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+AppRunner is een AWS-service die de functionaliteit verschaft om broncode of een container image te deployen op een snelle, simpele en kostefficiënte manier.
+De toepassing wordt op een schaalbare en veilige AWS-cloud omgeving opgezet.
+De gebruiker hoeft de configuratie van AWS-resources niet zelf in handen te nemen, alle achterliggende infrastructuur wordt door AppRunner beheerd~\autocite{AWSAppRunnerDoc}.
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz. naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin, gebruik je \texttt{$\backslash${}textcite\{\}}.
-Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backslash${}autocite\{\}}. In de volgende paragraaf een voorbeeld van elk.
+In een artikel van \textcite{Aussems2021} beschrijft hij AWS AppRunner als een geautomatiseerde versie van AWS Fargate, de serverless containerdienst van de provider.
+Daarom is deze service bestemd voor ontwikkelaars die geen tijd willen besteden in de uitrol, configuratie of beheer van hun containertoepassingen.
+Ze hoeven enkel de broncode af te leveren, in de vorm van een code repository of een container image~\autocite{AWSAppRunnerDoc}.
 
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+Toepassingen die via AppRunner zijn gedeployed worden op container instanties geplaatst.
+Deze instanties verbruiken computer- en geheugenbronnen, waarvoor de gebruiker moet betalen.
+Het geheugen en vCPU worden bij het opzet van AppRunner bepaald en op basis daarvan wordt de kost per GB bepaald.
+De kosten omvatten aan de ene kant de systeembronnen van een bevoorraadde container instantie.
+Deze beperkte systeembronnen zijn nodig om de container instantie op een inactief staat te behouden.
+Daarnaast moet er ook betaald worden voor de systeembronnen wanneer een container actief wordt gebruikt, bijvoorbeeld tijdens het verwerken van requests.
+Er wordt enkel betaald als de toepassing draaiende is.
+Het is heel eenvoudig om een AppRunner toepassing tijdelijk te stoppen en terug te starten.
+Deze acties kunnen via de console, CLI of API uitgevoerd worden~\autocite{AWSAppRunnerPricing}.
 
-\lipsum[7-20]
+%marktbevindingen
+\subsubsection{Marktevaluatie}
+
+%https://financesonline.com/news/building-saas-on-aws-now-faster-with-ga-release-of-low-code-tool-amplify-studio/
+%https://bejamas.io/discovery/hosting/aws-amplify/
+%Amplify focuses on user experience and gives frontend developers one of the easiest ways to use and connect various AWS products.
+
+%TODO: Marktevaluatie
+%In een AWS blog van \textcite{Spittel2022} legt hij uit hoe AWS Amplify Studio gemaakt is om ontwikkelaars
+
+\subsection{AWS Amplify}
+\label{sec:service-amplify}
+
+%AWS Amplify is a set of purpose-built tools and features that lets frontend web and mobile developers quickly and
+%easily build full-stack applications on AWS, with the flexibility to leverage the breadth of AWS services as your use
+%cases evolve. With Amplify, you can configure a web or mobile app backend, connect your app in minutes, visually build a web
+%frontend UI, and easily manage app content outside the AWS console. Ship faster and scale effortlessly—with no cloud expertise needed.
+%
+%Customers often ask developers to design and create a web application form that captures the registration
+%for some events or training that they want to host. AWS Amplify solves this problem by creating the required
+%resources and generating the boilerplate integration code for different layers using serverless technologies.
+%Now, developers can focus on developing the business logic while Amplify manages the undifferentiated heavy-lifting of building and configuring the infrastructure resources.
+%
+%Amplify is a fast and easy way to build cloud-powered web and mobile apps on AWS.
+%Amplify comprises a set of tools and services that enable front-end web and mobile developers to leverage the power of AWS services to build innovative and feature-rich applications.
+%
+%Benefits
+%Add pre-built UI components from popular frameworks such as ReactJS, Vue, and AngularJS to accelerate front-end development.
+%Add a serverless backend and use Amplify libraries to integrate it with your backend.
+%Add a hosting environment to deploy and host the web application using Amplify Hosting.
+
+% BRON
+
+Deze AWS-service bestaat uit een set van tools gericht voor het ontwikkelen van frontend web en mobiele toepassingen.
+AWS Amplify zorgt voor het opzet van de onderliggende AWS-resources.
+AWS Amplify maakt de integratie met andere architectuurlagen alsook backend componenten mogelijk via serverless technologieën~\autocite{Kandaswamy2022}.
+
+\subsubsection{Marktevaluatie}
+
+%https://financesonline.com/news/building-saas-on-aws-now-faster-with-ga-release-of-low-code-tool-amplify-studio/
+%https://bejamas.io/discovery/hosting/aws-amplify/
+%Amplify focuses on user experience and gives frontend developers one of the easiest ways to use and connect various AWS products.
+
+%TODO: Marktevaluatie
+
+In een AWS blog van \textcite{Spittel2022} legt hij uit hoe AWS Amplify Studio gemaakt is om het leven van ontwikkelaars gemakkelijker te maken.
+De ontwerp-ontwikkelaar overdracht gebeurt vlotter d.m.v.\ Amplify.
+Bovendien is de code aanpassen of uitbreiden heel eenvoudig met de gegenereerde componenten van Amplify Studio.
+
+Ook \textcite{Nwamba2022} vertelt in zijn artikel hoe ontwikkelaars steeds meer low-code tools adopteren.
+Ontwikkelaars die het ontwikkelwerk voor het bouwen van een toepassing interface willen vereenvoudigen moeten AWS Amplify overwegen.
+
+%\textcite{West2020}
+
+%TODO: https://aws.amazon.com/blogs/aws/host-your-apps-with-aws-amplify-console-from-the-aws-amplify-cli/
+
+\subsection{AWS Copilot}
+\label{sec:service-copilot}
+
+\subsection{AWS Cloudformation}
+\label{sec:service-cloudformation}
+
+Cloudformation is een AWS-service voor het modelleren en opzetten van AWS-resources.
+Complexe opstellingen, waarbij meerdere AWS-resources van elkaar afhankelijk zijn en samen functioneren, kunnen als één geheel geconfigureerd worden.
+Een Cloudformation template moet meerdere keren kunnen gebruikt worden.
+Het is daarom ook mogelijk om via parameters de template dynamisch te maken.
+De gebruiker kan a.d.h.v.\ deze parameters de configuratie van de AWS-resources anders instellen zonder de template elke keer te moeten aanpassen.
+Voor infrastructuur en AWS-resources die via Cloudformation zijn opgezet bestaat de mogelijkheid om aanpassingen te brengen via change-sets.
+Een alternatief is om bestaande infrastructuurcomponenten in een Cloudformation stack te opnemen.
+Daarnaast biedt Cloudformation ook de functionaliteit aan om infrastructuur eenvoudig af te bouwen~\autocite{Mansoor2014}.
+
+\subsubsection{Template}
+
+Cloudformation werkt op basis van templates.
+Een template is een JSON- of YAML-bestand waarin de gewenste AWS-resources en configuratie worden beschreven.
+Deze templates moeten op een S3 bucket beschikbaar gesteld worden om door Cloudformation gebruikt te kunnen worden.
+De mogelijkheid bestaat ook om naar een bestand op een lokaal systeem te verwijzen via de console, API of CLI.
+AWS zorgt in dat geval dat het bestand wordt opgeladen op een S3 bucket.
+Templates kunnen ook dynamisch geïmplementeerd worden door gebruik te maken van parameters.
+Deze parameters worden gespecifieerd bij het aanmaken of actualiseren van een stack.
+Zo wordt er vermeden om telkens opnieuw de template te moeten aanpassen~\autocite{AWSCLoudformationUser}.
+
+\subsubsection{Stack}
+
+Een Cloudformation stack is een collectie van AWS-resources die beheerd kunnen worden als één geheel.
+De stack wordt aangemaakt op basis van een Cloudformation template.
+Indien de template parameters bevat, dan kunnen die gespecifieerd worden bij het aanmaken van de stack.
+Anders bestaat ook de mogelijkheid om default waarden in te stellen voor de parameters.
+Nadat een stack is aangemaakt kan die geactualiseerd worden a.d.h.v.\ change-sets.
+De aangemaakte resources kunnen eenvoudig afgebouwd worden door de stack te verwijderen~\autocite{AWSCLoudformationUser}.
+
+\subsubsection{Change set}
+
+De resources van een bestaande stack kunnen aangepast worden via een change set.
+Daarvoor moet één of beide van de volgende acties uitgevoerd worden:
+
+\begin{itemize}
+    \item Aanpassingen brengen aan de bestaande template.
+    \item Nieuwe input parameters specifiëren.
+\end{itemize}
+
+Een change set is de vergelijking van de huidige template t.o.v.\ de aangepaste versie.
+In de change set worden de voorgestelde aanpassingen opgesomd.
+Eens goedgekeurd worden de resources voor die stack bijgewerkt~\autocite{AWSCLoudformationUser}.
+
+\subsubsection{Delete stack}
+
+Bij het verwijderen van een stack worden de betreffende AWS-resources afgebouwd.
+Het is mogelijk om bepaalde resources niet te verwijderen door een “deletion policy” te configureren waarbij de gewenste resources behouden blijven.
+Indien één van de resources niet verwijderd kan worden dan kan de stack ook niet verwijderd worden.
+In dat geval blijft de stack bestaan tot de systeemcomponenten succesvol verwijderd kunnen worden, of als alternatief kan aangegeven worden om deze te behouden buiten de stack~\autocite{AWSCLoudformationUser}.
+
+\subsection{Terraform}
+\label{sec:service-terraform}
+
+\subsection{Ansible}
+\label{sec:service-ansible}
+
+\subsection{AWS SAM}
+\label{sec:service-sam}
+
+\subsection{AWS CDK}
+\label{sec:service-cdk}
+
+Cloud Development Kit (CDK) is een open source software development framework gebruikt voor het schrijven van Infrastructure as Code (IaC) in een voor de ontwikkelaar vertrouwde programmeertaal zoals:
+
+\begin{itemize}
+    \item TypeScript
+    \item JavaScript
+    \item Python
+    \item Java
+    \item C\#
+\end{itemize}
+
+AWS CDK gebruikt de voordelen van een programmeertaal om infrastructuur en toepassingen te schrijven, lezen en begrijpen~\autocite{Mansoor2014}.
+
+De CDK-framework compileert de code en genereert een Cloudformation stack.
+Daarom gelden dezelfde principes op deze tool als bij Cloudformation.
+Via de CDK-Toolkit, een CLI-interface voor CDK, kunnen de standaard acties zoals een stack creëren, wijzigen en verwijderen uitgevoerd worden.
+Daarnaast zijn troubleshooting functionaliteiten ook beschikbaar via de CDK-Toolkit~\autocite{Mansoor2014}.
+
+\paragraph{App}
+
+De App construct is de root klasse van alle constructs.
+De klasse heeft geen argumenten nodig.
+Bij het aanmaken van een Stack construct moet er verwezen naar een App construct.
+
+\paragraph{Stack}
+
+Een stack is de eenheid van deployment voor AWS CDK.
+Een CDK-stack is gelijkwaardig aan een Cloudformation-stack en beschikt over dezelfde beperkingen.
+Alle AWS-resources die gedefinieerd worden binnen een stack worden als één geheel beschouwd.
+
+\paragraph{Construct}
+
+Een construct ligt aan de basis van een CDK-app.
+Het staat voor een AWS-resource en bevat alle configuratie die nodig is voor Cloudformation om de component te bouwen.
+Een construct kan één AWS-resource vertegenwoordigen zoals een AWS S3 bucket of kan bestaan uit meerdere resources waarbij men spreekt over een higher-level abstraction construct.
+De AWS CDK library bevat een collectie van constructs voor elke AWS-resource.
+Er bestaan ook meer complexe third-party constructs die beschikbaar gesteld worden via de Construct Hub.
+
+\paragraph{CDK-Toolkit}
+
+Met behulp van de toolkit CLI kunnen alle functionaliteiten uitgevoerd worden die nodig zijn om de applicatie en infrastructuur te kunnen deployen en beheren zoals:
+
+\begin{description}
+    \item[Synthesis:] De synth commando compileert de code en genereert een Cloudformation template.
+    \item[Deploy:] De deploy commando zal de stack deployen naar de geconfigureerde AWS-account, voor elke deploy wordt de code gesynthetiseerd.
+    \item[Diff:] De diff commando vergelijkt de laatste stack met de laatste gesynthetiseerde template, de output is een overzicht van de verschillen tussen de twee.
+    \item[Destroy:] De destroy commando verwijdert de stack en de bijhorende AWS-resources, dit is gelijkwaardig aan het verwijderen van een Cloudformation stack.
+\end{description}
+
+\subsection{Troposphere}
+\label{sec:service-troposphere}
