@@ -12,11 +12,11 @@ De code moet een consistent en repliceerbaar resultaat leveren die automatisatie
 
 AppRunner is een AWS-service die de functionaliteit verschaft om broncode of een container image te deployen op een snelle, simpele en kostefficiënte manier.
 De toepassing wordt op een schaalbare en veilige AWS-cloud omgeving opgezet.
-De gebruiker hoeft de configuratie van AWS-resources niet zelf in handen te nemen, alle achterliggende infrastructuur wordt door AppRunner beheerd~\autocite{AWSAppRunnerDoc}.
+De gebruiker hoeft de configuratie van AWS-resources niet zelf in handen te nemen, alle achterliggende infrastructuur wordt door AppRunner beheerd~\autocite{Khen2022}.
 
 In een artikel van \textcite{Aussems2021} beschrijft hij AWS AppRunner als een geautomatiseerde versie van AWS Fargate, de serverless containerdienst van de provider.
 Daarom is deze service bestemd voor ontwikkelaars die geen tijd willen besteden in de uitrol, configuratie of beheer van hun containertoepassingen.
-Ze hoeven enkel de broncode af te leveren, in de vorm van een code repository of een container image~\autocite{AWSAppRunnerDoc}.
+Ze hoeven enkel de broncode af te leveren, in de vorm van een code repository of een container image~\autocite{Khen2022}.
 
 Toepassingen die via AppRunner zijn gedeployed worden op container instanties geplaatst.
 Deze instanties verbruiken computer- en geheugenbronnen, waarvoor de gebruiker moet betalen.
@@ -61,9 +61,41 @@ Deze acties kunnen via de console, CLI of API uitgevoerd worden~\autocite{AWSApp
 
 % BRON
 
-Deze AWS-service bestaat uit een set van tools gericht voor het ontwikkelen van frontend web en mobiele toepassingen.
-AWS Amplify zorgt voor het opzet van de onderliggende AWS-resources.
-AWS Amplify maakt de integratie met andere architectuurlagen alsook backend componenten mogelijk via serverless technologieën~\autocite{Kandaswamy2022}.
+AWS Amplify bestaat uit een set van tools gericht voor het ontwikkelen van frontend web en mobiele toepassingen.
+Met deze tools wordt het opzetten van een full-stack toepassing op AWS-infrastructuur op een intuïtieve manier mogelijk~\autocite{AWSCopilotOverview}.
+De gebruiker heeft de flexibiliteit om het grote aanbod aan AWS-componenten te integreren met zijn oplossing.
+Integratie met backend componenten wordt mogelijk gemaakt via serverless technologieën~\autocite{Kandaswamy2022}.
+
+Vervolgens worden de door Amplify aangeboden tools verder uitgelicht.
+
+\subsubsection{Amplify libraries}
+
+De Amplify open-source client libraries voorzien use-case gebaseerde, declaratieve en gemakkelijk te gebruiken interfaces
+doorheen verschillende categorieën van cloud ondersteunende operaties.
+Deze stellen mobiele en web ontwikkelaars in staat om integraties met hun backend infrastructuur te realiseren.
+De libraries worden ondersteund door de AWS-cloud en bieden een inplugbaar model aan, dat ook door andere cloud leveranciers kan worden gebruikt.
+Verder kunnen de libraries gebruikt worden met beide, nieuwe backend aangemaakt via de Amplify CLI en bestaande backend bronnen~\autocite{AWSAmplifyDocs}.
+
+\subsubsection{Amplify Studio}
+
+AWS Amplify Studio is een visuele ontwikkeling omgeving voor het bouwen van full-stack web en mobiele toepassingen.
+Studio bouwt verder op bestaande backend-bouw mogelijkheden in AWS Simplify, UI-ontwikkeling wordt aanzienlijk versneld.
+Met Studio is het mogelijk om een webtoepassing in zijn geheel te bouwen, front-to-back, met minimale codeer werk.
+En toch behoudt de gebruiker volledige controle over de toepassing ontwerp en gedrag via code~\autocite{AWSAmplifyDocs}.
+
+\subsubsection{Amplify CLI}
+
+%The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app.
+De Amplify Command Line Interface (CLI) is een eendrachtig tool die het bouwen, integreren en beheren van AWS-services voor een toepassing faciliteert~\autocite{AWSAmplifyDocs}.
+%TODO: verder uitleggen
+
+\subsubsection{Amplify Hosting}
+
+%Amplify Hosting provides a git-based workflow for hosting full-stack serverless web apps with continuous deployment.
+%This user guide provides the information you need to get started with Amplify Hosting.
+
+Amplify Hosting biedt een git-gebaseerde workflow aan voor het hosten van een full-stack serverless webtoepassing met continuous deployment(CD).
+%TODO: verder uitleggen
 
 \subsubsection{Marktevaluatie}
 
@@ -84,8 +116,18 @@ Ontwikkelaars die het ontwikkelwerk voor het bouwen van een toepassing interface
 
 %TODO: https://aws.amazon.com/blogs/aws/host-your-apps-with-aws-amplify-console-from-the-aws-amplify-cli/
 
+
+\subsection{AWS Lightsail}
+\label{sec:service-lightsail}
+
+
 \subsection{AWS Copilot}
 \label{sec:service-copilot}
+
+%AWS Copilot is an open-source command-line interface that makes it easy for developers to build,
+%release, and operate production-ready containerized applications on AWS App Runner, Amazon ECS, and AWS Fargate.
+
+AWS Copilot is een command line interface (CLI) ~\autocite{Kumar2022}
 
 \subsection{AWS Cloudformation}
 \label{sec:service-cloudformation}
