@@ -41,26 +41,6 @@ Deze acties kunnen via de console, CLI of API uitgevoerd worden~\autocite{AWSApp
 \subsection{AWS Amplify}
 \label{sec:service-amplify}
 
-%AWS Amplify is a set of purpose-built tools and features that lets frontend web and mobile developers quickly and
-%easily build full-stack applications on AWS, with the flexibility to leverage the breadth of AWS services as your use
-%cases evolve. With Amplify, you can configure a web or mobile app backend, connect your app in minutes, visually build a web
-%frontend UI, and easily manage app content outside the AWS console. Ship faster and scale effortlessly—with no cloud expertise needed.
-%
-%Customers often ask developers to design and create a web application form that captures the registration
-%for some events or training that they want to host. AWS Amplify solves this problem by creating the required
-%resources and generating the boilerplate integration code for different layers using serverless technologies.
-%Now, developers can focus on developing the business logic while Amplify manages the undifferentiated heavy-lifting of building and configuring the infrastructure resources.
-%
-%Amplify is a fast and easy way to build cloud-powered web and mobile apps on AWS.
-%Amplify comprises a set of tools and services that enable front-end web and mobile developers to leverage the power of AWS services to build innovative and feature-rich applications.
-%
-%Benefits
-%Add pre-built UI components from popular frameworks such as ReactJS, Vue, and AngularJS to accelerate front-end development.
-%Add a serverless backend and use Amplify libraries to integrate it with your backend.
-%Add a hosting environment to deploy and host the web application using Amplify Hosting.
-
-% BRON
-
 AWS Amplify bestaat uit een set van tools gericht voor het ontwikkelen van frontend web en mobiele toepassingen.
 Met deze tools wordt het opzetten van een full-stack toepassing op AWS-infrastructuur op een intuïtieve manier mogelijk~\autocite{AWSCopilotOverview}.
 De gebruiker heeft de flexibiliteit om het grote aanbod aan AWS-componenten te integreren met zijn oplossing.
@@ -103,8 +83,6 @@ Amplify Hosting biedt een git-gebaseerde workflow aan voor het hosten van een fu
 %https://bejamas.io/discovery/hosting/aws-amplify/
 %Amplify focuses on user experience and gives frontend developers one of the easiest ways to use and connect various AWS products.
 
-%TODO: Marktevaluatie
-
 In een AWS blog van \textcite{Spittel2022} legt hij uit hoe AWS Amplify Studio gemaakt is om het leven van ontwikkelaars gemakkelijker te maken.
 De ontwerp-ontwikkelaar overdracht gebeurt vlotter d.m.v.\ Amplify.
 Bovendien is de code aanpassen of uitbreiden heel eenvoudig met de gegenereerde componenten van Amplify Studio.
@@ -112,25 +90,55 @@ Bovendien is de code aanpassen of uitbreiden heel eenvoudig met de gegenereerde 
 Ook \textcite{Nwamba2022} vertelt in zijn artikel hoe ontwikkelaars steeds meer low-code tools adopteren.
 Ontwikkelaars die het ontwikkelwerk voor het bouwen van een toepassing interface willen vereenvoudigen moeten AWS Amplify overwegen.
 
-%\textcite{West2020}
-
-%TODO: https://aws.amazon.com/blogs/aws/host-your-apps-with-aws-amplify-console-from-the-aws-amplify-cli/
-
-
 \subsection{AWS Lightsail}
-\label{sec:service-lightsail}
+\label{subsec:service-lightsail}
 
+AWS Lightsail verschaft cloud systeembronnen om een toepassing of webtoepassing moeiteloos te kunnen opzetten.
+Lightsail biedt vereenvoudigde diensten aan zoals instanties, containers, databanken, opslag, enz.
+Niet alleen is Lightsail compatibel met voorgeconfigureerde blueprints zoals Wordpress, Prestashop of LAMP\@.
+Maar het is ook mogelijk om statische content te hosten met Lightsail en die globaal ter beschikking te stellen~\autocite{AWSLightsail2022}.
+
+Verder worden een aantal kenmerken van Lightsail uitgelicht.
+
+\begin{description}
+    \item[Instances: ] Lightsail virtuele servers voor het hosten van toepassingen.
+    \item[Containers: ] Deployen van Docker containers via Lightsail.
+    \item[Simplified load balancers: ] Vereenvoudigde load balancing functionaliteit.
+    \item[Managed databases: ] Volledig geconfigureerde MySQL of PostgreSQL databanken.
+    \item[Block and object storage: ] Schaalbaar block en object opslag op de AWS-cloud.
+    \item[CDN distributions: ] Content delivery networks (CDN) voor de globale distributie van toepassingen.
+\end{description}
+
+\subsubsection{Marktevaluatie}
+
+In een blog van \textcite{Warrier2022} beschrijft hij Lightsail als een gemakkelijke tool om eenvoudige workloads te beheren
+en voorgeconfigureerde infrastructuur, zoals toepassingen, databanken en andere populaire stacks, te provisioneren.
 
 \subsection{AWS Copilot}
-\label{sec:service-copilot}
+\label{subsec:service-copilot}
 
 %AWS Copilot is an open-source command-line interface that makes it easy for developers to build,
 %release, and operate production-ready containerized applications on AWS App Runner, Amazon ECS, and AWS Fargate.
 
-AWS Copilot is een command line interface (CLI) ~\autocite{Kumar2022}
+The Copilot CLI is a tool for developers to build, release, and operate production-ready containerized applications on AWS App Runner,
+Amazon ECS, and AWS Fargate.
+From getting started, pushing to staging, and releasing to production, Copilot can help manage the entire lifecycle of your application development.
+
+%Copilot makes it super easy to set up and deploy your containers on AWS - but getting started is only the first step of the journey.
+%What happens when you want to have one copy of your service running only for testing and another copy serving production traffic?
+%What happens when you want to add another service? How do you manage deploying to all of these services? Copilot wants to help you with
+%all of these things so let's jump into some of Copilot's core concepts to understand how they can help.
+~\autocite{Karakus2022}
+
+AWS Copilot is een command line interface (CLI).
+Deze tool~\autocite{Kumar2022}
+
+
+\subsection{AWS Elastic Beanstalk}
+\label{subsec:service-elastic-beanstalk}
 
 \subsection{AWS Cloudformation}
-\label{sec:service-cloudformation}
+\label{subsec:service-cloudformation}
 
 Cloudformation is een AWS-service voor het modelleren en opzetten van AWS-resources.
 Complexe opstellingen, waarbij meerdere AWS-resources van elkaar afhankelijk zijn en samen functioneren, kunnen als één geheel geconfigureerd worden.
@@ -183,16 +191,16 @@ Indien één van de resources niet verwijderd kan worden dan kan de stack ook ni
 In dat geval blijft de stack bestaan tot de systeemcomponenten succesvol verwijderd kunnen worden, of als alternatief kan aangegeven worden om deze te behouden buiten de stack~\autocite{AWSCLoudformationUser}.
 
 \subsection{Terraform}
-\label{sec:service-terraform}
+\label{subsec:service-terraform}
 
 \subsection{Ansible}
-\label{sec:service-ansible}
+\label{subsec:service-ansible}
 
 \subsection{AWS SAM}
-\label{sec:service-sam}
+\label{subsec:service-sam}
 
 \subsection{AWS CDK}
-\label{sec:service-cdk}
+\label{subsec:service-cdk}
 
 Cloud Development Kit (CDK) is een open source software development framework gebruikt voor het schrijven van Infrastructure as Code (IaC) in een voor de ontwikkelaar vertrouwde programmeertaal zoals:
 
