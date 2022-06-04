@@ -130,9 +130,55 @@ From getting started, pushing to staging, and releasing to production, Copilot c
 %all of these things so let's jump into some of Copilot's core concepts to understand how they can help.
 ~\autocite{Karakus2022}
 
-AWS Copilot is een command line interface (CLI).
-Deze tool~\autocite{Kumar2022}
+AWS Copilot is een command line interface (CLI) voor ontwikkelaars die gecontaineriseerde toepassingen willen deployen op AWS-services zoals AWS AppRunner, AWS Elastic container service (ECS) en AWS Fargate.
+De volledige levenscyclus van de toepassing kan via Copilot worden beheerd.
+Componenten zoals omgevingen en services kunnen m.b.v. de tool worden geconfigureerd.
+Vervolgend worden de hoofdconcepten van Copilot verder uitgelicht~\autocite{Karakus2022}.
 
+\subsubsection{Applications}
+
+Een applicatie is een collectie van services en omgevingen.
+De applicatienaam is dan meestal een high-level beschrijving van het product.
+Bijvoorbeeld een applicatie met naam "Chat" kan twee services bevatten, "frontend" en "api".
+Daarnaast kunnen de services gedeployed worden op een "test" en "production" omgeving~\autocite{Karakus2022}.
+
+\subsubsection{Environments}
+
+Het concept van omgevingen is door iedere ontwikkelaar gekend.
+Voordat de toepassing op een productieve omgeving kan worden vrijgesteld is het aangeraden om eerst een test omgeving te voorzien.
+Deze testomgeving is dan een weerspiegeling van wat er uiteindelijk in productie zal staan.
+
+Elke omgeving kan zijn eigen versie van een service bevatten.
+De optimale werkwijze zou zijn om, voordat een service gedeployed wordt op de productieomgeving, die eerst te testen op de testomgeving.
+
+Verder bestaat ook de mogelijkheid om een nieuwe service aan een bestaande omgeving toe te voegen.
+Elke omgeving bevat een set van AWS-resources die gedeeld wordt binnen die omgeving.
+Deze omvatten netwerk-resources, de ECS-cluster en de load-balancer.
+Een nieuwe service zou gebruik maken van deze gedeelde resources~\autocite{Karakus2022}.
+
+\subsubsection{Services}
+
+Een service bestaat uit de code van de toepassing en alle ondersteunende infrastructuur die nodig is om de toepassing op AWS te kunnen hosten.
+De gebruiker kiest via de CLI welke type service wordt aangemaakt.
+Afhankelijk van het type service worden de nodige AWS-resources bevoorraad.
+Ter illustratie, een gebruiker kan kiezen voor een service om trafiek van het internet te bedienen.
+Daarbij horen AWS-resources zoals een Application Load Balancer (ALB) en een ECS service op AWS Fargate.
+
+Als de gebruiker een service type heeft gekozen, wordt er een Dockerfile gegenereerd en de container images worden bewaard op Elastic Container Repository (ECR).
+Ook wordt er een \emph{manifest} bestand aangemaakt, deze bevat configuratie parameters voor de service zoals hoeveelheid geheugen, CPU, het aantal kopieën van de service en andere~\autocite{Karakus2022}.
+
+\subsubsection{Jobs}
+
+Jobs zijn vluchtig ECS tasks die getriggerd worden door een event.
+Wanneer een job voldaan is, wordt de ECS task beëindigd.
+De gebruiker dient alle nodige configuratie te voorzien voor de opzet van de ECS task.
+Daarnaast wordt er ook een \emph{manifest} bestand voorzien waar geavanceerde configuratie kan worden ingesteld.
+
+\subsubsection{Pipelines}
+
+Een continuous deployment (CD) pipeline kan worden opgezet via Copilot.
+Copilot is compatibel met de volgende git repositories: GitHub, BitBucket en CodeCommit.
+Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container image op ECR en begint de deploy naar een omgeving.
 
 \subsection{AWS Elastic Beanstalk}
 \label{subsec:service-elastic-beanstalk}
