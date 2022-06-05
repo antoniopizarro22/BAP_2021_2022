@@ -6,6 +6,7 @@
 \documentclass{bachproef-tin}
 
 \usepackage{hogent-thesis-titlepage} % Titelpagina conform aan HOGENT huisstijl
+\usepackage[acronym,toc]{glossaries}
 
 %%---------- Documenteigenschappen ---------------------------------------------
 % TODO: Vul dit aan met je eigen info:
@@ -36,6 +37,10 @@
 %  - 2e semester = 2e examenperiode => 2
 %  - tweede zit  = 3e examenperiode => 3
 \examenperiode{3}
+
+% woordenlijst + acroniemen
+\makeglossaries
+\loadglsentries{glossary}
 
 %===============================================================================
 % Inhoud document
@@ -130,6 +135,9 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 %TODO: woordenlijst + afkortingen + acroniemen
 %\input{glossary}
 %%---------- Referentielijst --------------------------------------------------
+
+\printglossary[type=\acronymtype]
+\printglossary[title=Woordenlijst, toctitle=Woordenlijst]
 
 \printbibliography[heading=bibintoc]
 

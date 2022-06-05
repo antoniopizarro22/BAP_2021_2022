@@ -1,10 +1,10 @@
 \chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}
 \label{ch:stand-van-zaken}
 
-Infrastructure as Code (IaC) is een essentiële bouwsteen binnen de DevOps methodologie.
+\acrfull{iac} is een essentiële bouwsteen binnen de DevOps methodologie.
 De infrastructuur code wordt behandeld op dezelfde manier als een softwareontwikkelaar zijn code zou behandelen.
 Met andere woorden, de code wordt op een ordelijke manier binnen een versiebeheer systeem bewaard.
-Daarnaast moet het ook mogelijk zijn om continuous integration (CI) en continuous development (CD) toe te passen op de infrastructuur code.
+Daarnaast moet het ook mogelijk zijn om \acrfull{ci} en \acrfull{cd} toe te passen op de infrastructuur code.
 De code moet een consistent en repliceerbaar resultaat leveren die automatisatie toelaat~\autocite{Mansoor2014}.
 
 \subsection{AWS AppRunner}
@@ -26,7 +26,7 @@ Deze beperkte systeembronnen zijn nodig om de container instantie op een inactie
 Daarnaast moet er ook betaald worden voor de systeembronnen wanneer een container actief wordt gebruikt, bijvoorbeeld tijdens het verwerken van requests.
 Er wordt enkel betaald als de toepassing draaiende is.
 Het is heel eenvoudig om een AppRunner toepassing tijdelijk te stoppen en terug te starten.
-Deze acties kunnen via de console, CLI of API uitgevoerd worden~\autocite{AWSAppRunnerPricing}.
+Deze acties kunnen via de console, \acrshort{cli} of \acrshort{api} uitgevoerd worden~\autocite{AWSAppRunnerPricing}.
 
 %marktbevindingen
 \subsubsection{Marktevaluatie}
@@ -54,7 +54,7 @@ De Amplify open-source client libraries voorzien use-case gebaseerde, declaratie
 doorheen verschillende categorieën van cloud ondersteunende operaties.
 Deze stellen mobiele en web ontwikkelaars in staat om integraties met hun backend infrastructuur te realiseren.
 De libraries worden ondersteund door de AWS-cloud en bieden een inplugbaar model aan, dat ook door andere cloud leveranciers kan worden gebruikt.
-Verder kunnen de libraries gebruikt worden met beide, nieuwe backend aangemaakt via de Amplify CLI en bestaande backend bronnen~\autocite{AWSAmplifyDocs}.
+Verder kunnen de libraries gebruikt worden met beide, nieuwe backend aangemaakt via de Amplify \acrshort{cli} en bestaande backend bronnen~\autocite{AWSAmplifyDocs}.
 
 \subsubsection{Amplify Studio}
 
@@ -63,10 +63,10 @@ Studio bouwt verder op bestaande backend-bouw mogelijkheden in AWS Simplify, UI-
 Met Studio is het mogelijk om een webtoepassing in zijn geheel te bouwen, front-to-back, met minimale codeer werk.
 En toch behoudt de gebruiker volledige controle over de toepassing ontwerp en gedrag via code~\autocite{AWSAmplifyDocs}.
 
-\subsubsection{Amplify CLI}
+\subsubsection{Amplify \acrshort{cli}}
 
 %The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app.
-De Amplify Command Line Interface (CLI) is een eendrachtig tool die het bouwen, integreren en beheren van AWS-services voor een toepassing faciliteert~\autocite{AWSAmplifyDocs}.
+De Amplify \acrfull{cli} is een eendrachtig tool die het bouwen, integreren en beheren van AWS-services voor een toepassing faciliteert~\autocite{AWSAmplifyDocs}.
 %TODO: verder uitleggen
 
 \subsubsection{Amplify Hosting}
@@ -106,7 +106,7 @@ Verder worden een aantal kenmerken van Lightsail uitgelicht.
     \item[Simplified load balancers: ] Vereenvoudigde load balancing functionaliteit.
     \item[Managed databases: ] Volledig geconfigureerde MySQL of PostgreSQL databanken.
     \item[Block and object storage: ] Schaalbaar block en object opslag op de AWS-cloud.
-    \item[CDN distributions: ] Content delivery networks (CDN) voor de globale distributie van toepassingen.
+    \item[CDN distributions: ] \acrfull{cdn} voor de globale distributie van toepassingen.
 \end{description}
 
 \subsubsection{Marktevaluatie}
@@ -117,30 +117,21 @@ en voorgeconfigureerde infrastructuur, zoals toepassingen, databanken en andere 
 \subsection{AWS Copilot}
 \label{subsec:service-copilot}
 
-%AWS Copilot is an open-source command-line interface that makes it easy for developers to build,
-%release, and operate production-ready containerized applications on AWS App Runner, Amazon ECS, and AWS Fargate.
-
-The Copilot CLI is a tool for developers to build, release, and operate production-ready containerized applications on AWS App Runner,
-Amazon ECS, and AWS Fargate.
+The Copilot \acrshort{cli} is a tool for developers to build, release, and operate production-ready containerized applications on AWS App Runner,
+Amazon \acrshort{ecs}, and AWS Fargate.
 From getting started, pushing to staging, and releasing to production, Copilot can help manage the entire lifecycle of your application development.
 
-%Copilot makes it super easy to set up and deploy your containers on AWS - but getting started is only the first step of the journey.
-%What happens when you want to have one copy of your service running only for testing and another copy serving production traffic?
-%What happens when you want to add another service? How do you manage deploying to all of these services? Copilot wants to help you with
-%all of these things so let's jump into some of Copilot's core concepts to understand how they can help.
-~\autocite{Karakus2022}
-
-AWS Copilot is een command line interface (CLI) voor ontwikkelaars die gecontaineriseerde toepassingen willen deployen op AWS-services zoals AWS AppRunner, AWS Elastic container service (ECS) en AWS Fargate.
+AWS Copilot is een \acrfull{cli} voor ontwikkelaars die gecontaineriseerde toepassingen willen deployen op AWS-services zoals AWS AppRunner, AWS Elastic container service (ECS) en AWS Fargate.
 De volledige levenscyclus van de toepassing kan via Copilot worden beheerd.
-Componenten zoals omgevingen en services kunnen m.b.v. de tool worden geconfigureerd.
-Vervolgend worden de hoofdconcepten van Copilot verder uitgelicht~\autocite{Karakus2022}.
+Componenten zoals omgevingen en services kunnen m.b.v.\ de tool worden geconfigureerd.
+Vervolgens worden de hoofdconcepten van Copilot uitgelicht~\autocite{Karakus2022}.
 
 \subsubsection{Applications}
 
 Een applicatie is een collectie van services en omgevingen.
 De applicatienaam is dan meestal een high-level beschrijving van het product.
 Bijvoorbeeld een applicatie met naam "Chat" kan twee services bevatten, "frontend" en "api".
-Daarnaast kunnen de services gedeployed worden op een "test" en "production" omgeving~\autocite{Karakus2022}.
+Verder kunnen de services gedeployed worden op een "test" en "production" omgeving~\autocite{Karakus2022}.
 
 \subsubsection{Environments}
 
@@ -153,32 +144,32 @@ De optimale werkwijze zou zijn om, voordat een service gedeployed wordt op de pr
 
 Verder bestaat ook de mogelijkheid om een nieuwe service aan een bestaande omgeving toe te voegen.
 Elke omgeving bevat een set van AWS-resources die gedeeld wordt binnen die omgeving.
-Deze omvatten netwerk-resources, de ECS-cluster en de load-balancer.
+Deze omvatten netwerk-resources, de \acrshort{ecs}-cluster en de load-balancer.
 Een nieuwe service zou gebruik maken van deze gedeelde resources~\autocite{Karakus2022}.
 
 \subsubsection{Services}
 
 Een service bestaat uit de code van de toepassing en alle ondersteunende infrastructuur die nodig is om de toepassing op AWS te kunnen hosten.
-De gebruiker kiest via de CLI welke type service wordt aangemaakt.
+De gebruiker kiest via de \acrshort{cli} welke type service wordt aangemaakt.
 Afhankelijk van het type service worden de nodige AWS-resources bevoorraad.
 Ter illustratie, een gebruiker kan kiezen voor een service om trafiek van het internet te bedienen.
-Daarbij horen AWS-resources zoals een Application Load Balancer (ALB) en een ECS service op AWS Fargate.
+Daarbij horen AWS-resources zoals een \acrfull{alb} en een \acrshort{ecs} service op AWS Fargate.
 
-Als de gebruiker een service type heeft gekozen, wordt er een Dockerfile gegenereerd en de container images worden bewaard op Elastic Container Repository (ECR).
+Als de gebruiker een service type heeft gekozen, wordt er een Dockerfile gegenereerd en de container images worden bewaard op \acrfull{ecr}.
 Ook wordt er een \emph{manifest} bestand aangemaakt, deze bevat configuratie parameters voor de service zoals hoeveelheid geheugen, CPU, het aantal kopieën van de service en andere~\autocite{Karakus2022}.
 
 \subsubsection{Jobs}
 
 Jobs zijn vluchtig ECS tasks die getriggerd worden door een event.
-Wanneer een job voldaan is, wordt de ECS task beëindigd.
-De gebruiker dient alle nodige configuratie te voorzien voor de opzet van de ECS task.
+Wanneer een job voldaan is, wordt de \acrshort{ecs} task beëindigd.
+De gebruiker dient alle nodige configuratie te voorzien voor de opzet van de \acrshort{ecs} task.
 Daarnaast wordt er ook een \emph{manifest} bestand voorzien waar geavanceerde configuratie kan worden ingesteld~\autocite{Karakus2022}.
 
 \subsubsection{Pipelines}
 
-Een continuous deployment (CD) pipeline kan worden opgezet via Copilot.
+Een \acrfull{cd} pipeline kan worden opgezet via Copilot.
 Copilot is compatibel met de volgende git repositories: GitHub, BitBucket en CodeCommit.
-Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container image op ECR en begint de deploy naar een omgeving~\autocite{Karakus2022}.
+Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container image op \acrshort{ecr} en begint de deploy naar een omgeving~\autocite{Karakus2022}.
 
 \subsection{AWS Elastic Beanstalk}
 \label{subsec:service-elastic-beanstalk}
@@ -199,9 +190,9 @@ Daarnaast biedt Cloudformation ook de functionaliteit aan om infrastructuur eenv
 
 Cloudformation werkt op basis van templates.
 Een template is een JSON- of YAML-bestand waarin de gewenste AWS-resources en configuratie worden beschreven.
-Deze templates moeten op een S3 bucket beschikbaar gesteld worden om door Cloudformation gebruikt te kunnen worden.
-De mogelijkheid bestaat ook om naar een bestand op een lokaal systeem te verwijzen via de console, API of CLI.
-AWS zorgt in dat geval dat het bestand wordt opgeladen op een S3 bucket.
+Deze templates moeten op een \acrshort{s3} bucket beschikbaar gesteld worden om door Cloudformation gebruikt te kunnen worden.
+De mogelijkheid bestaat ook om naar een bestand op een lokaal systeem te verwijzen via de console, \acrshort{api} of \acrshort{cli}.
+AWS zorgt in dat geval dat het bestand wordt opgeladen op een \acrshort{s3} bucket.
 Templates kunnen ook dynamisch geïmplementeerd worden door gebruik te maken van parameters.
 Deze parameters worden gespecifieerd bij het aanmaken of actualiseren van een stack.
 Zo wordt er vermeden om telkens opnieuw de template te moeten aanpassen~\autocite{AWSCLoudformationUser}.
@@ -248,7 +239,7 @@ In dat geval blijft de stack bestaan tot de systeemcomponenten succesvol verwijd
 \subsection{AWS CDK}
 \label{subsec:service-cdk}
 
-Cloud Development Kit (CDK) is een open source software development framework gebruikt voor het schrijven van Infrastructure as Code (IaC) in een voor de ontwikkelaar vertrouwde programmeertaal zoals:
+\acrfull{cdk} is een open source software development framework gebruikt voor het schrijven van \acrfull{iac} in een voor de ontwikkelaar vertrouwde programmeertaal zoals:
 
 \begin{itemize}
     \item TypeScript
@@ -258,12 +249,12 @@ Cloud Development Kit (CDK) is een open source software development framework ge
     \item C\#
 \end{itemize}
 
-AWS CDK gebruikt de voordelen van een programmeertaal om infrastructuur en toepassingen te schrijven, lezen en begrijpen~\autocite{Mansoor2014}.
+AWS \acrshort{cdk} gebruikt de voordelen van een programmeertaal om infrastructuur en toepassingen te schrijven, lezen en begrijpen~\autocite{Mansoor2014}.
 
-De CDK-framework compileert de code en genereert een Cloudformation stack.
+De \acrshort{cdk}-framework compileert de code en genereert een Cloudformation stack.
 Daarom gelden dezelfde principes op deze tool als bij Cloudformation.
-Via de CDK-Toolkit, een CLI-interface voor CDK, kunnen de standaard acties zoals een stack creëren, wijzigen en verwijderen uitgevoerd worden.
-Daarnaast zijn troubleshooting functionaliteiten ook beschikbaar via de CDK-Toolkit~\autocite{Mansoor2014}.
+Via de \acrshort{cdk}-Toolkit, een \acrshort{cli}-interface voor \acrshort{cdk}, kunnen de standaard acties zoals een stack creëren, wijzigen en verwijderen uitgevoerd worden.
+Daarnaast zijn troubleshooting functionaliteiten ook beschikbaar via de \acrshort{cdk}-Toolkit~\autocite{Mansoor2014}.
 
 \paragraph{App}
 
@@ -273,21 +264,21 @@ Bij het aanmaken van een Stack construct moet er verwezen naar een App construct
 
 \paragraph{Stack}
 
-Een stack is de eenheid van deployment voor AWS CDK.
-Een CDK-stack is gelijkwaardig aan een Cloudformation-stack en beschikt over dezelfde beperkingen.
+Een stack is de eenheid van deployment voor AWS \acrshort{cdk}.
+Een \acrshort{cdk}-stack is gelijkwaardig aan een Cloudformation-stack en beschikt over dezelfde beperkingen.
 Alle AWS-resources die gedefinieerd worden binnen een stack worden als één geheel beschouwd.
 
 \paragraph{Construct}
 
-Een construct ligt aan de basis van een CDK-app.
+Een construct ligt aan de basis van een \acrshort{cdk}-app.
 Het staat voor een AWS-resource en bevat alle configuratie die nodig is voor Cloudformation om de component te bouwen.
 Een construct kan één AWS-resource vertegenwoordigen zoals een AWS S3 bucket of kan bestaan uit meerdere resources waarbij men spreekt over een higher-level abstraction construct.
-De AWS CDK library bevat een collectie van constructs voor elke AWS-resource.
+De AWS \acrshort{cdk} library bevat een collectie van constructs voor elke AWS-resource.
 Er bestaan ook meer complexe third-party constructs die beschikbaar gesteld worden via de Construct Hub.
 
 \paragraph{CDK-Toolkit}
 
-Met behulp van de toolkit CLI kunnen alle functionaliteiten uitgevoerd worden die nodig zijn om de applicatie en infrastructuur te kunnen deployen en beheren zoals:
+Met behulp van de toolkit \acrshort{cli} kunnen alle functionaliteiten uitgevoerd worden die nodig zijn om de applicatie en infrastructuur te kunnen deployen en beheren zoals:
 
 \begin{description}
     \item[Synthesis:] De synth commando compileert de code en genereert een Cloudformation template.
