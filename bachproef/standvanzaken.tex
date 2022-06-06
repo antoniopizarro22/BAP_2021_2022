@@ -10,13 +10,13 @@ De code moet een consistent en repliceerbaar resultaat leveren die automatisatie
 \subsection{AWS AppRunner}
 \label{sec:service-apprunner}
 
-AppRunner is een AWS-service die de functionaliteit verschaft om broncode of een container image te inzetten op een snelle, simpele en kostefficiënte manier.
+AppRunner is een AWS-service die de functionaliteit verschaft om broncode of een container ~\gls{image} te inzetten op een snelle, simpele en kostefficiënte manier.
 De toepassing wordt op een schaalbare en veilige AWS-cloud omgeving opgezet.
 De gebruiker hoeft de configuratie van AWS-resources niet zelf in handen te nemen, alle achterliggende infrastructuur wordt door AppRunner beheerd~\autocite{Khen2022}.
 
 In een artikel van \textcite{Aussems2021} beschrijft hij AWS AppRunner als een geautomatiseerde versie van AWS Fargate, de serverless containerdienst van de provider.
 Daarom is deze service bestemd voor ontwikkelaars die geen tijd willen besteden in de uitrol, configuratie of beheer van hun containertoepassingen.
-Ze hoeven enkel de broncode af te leveren, in de vorm van een code repository of een container image~\autocite{Khen2022}.
+Ze hoeven enkel de broncode af te leveren, in de vorm van een code repository of een container ~\gls{image}~\autocite{Khen2022}.
 
 Toepassingen die via AppRunner zijn ingezet, worden op container instanties geplaatst.
 Deze instanties verbruiken computer- en geheugenbronnen, waarvoor de gebruiker moet betalen.
@@ -155,7 +155,7 @@ Afhankelijk van het type service worden de nodige AWS-resources bevoorraad.
 Ter illustratie, een gebruiker kan kiezen voor een service om trafiek van het internet te bedienen.
 Daarbij horen AWS-resources zoals een \acrfull{alb} en een \acrshort{ecs} service op AWS Fargate.
 
-Als de gebruiker een service type heeft gekozen, wordt er een Dockerfile gegenereerd en de container images worden bewaard op \acrfull{ecr}.
+Als de gebruiker een service type heeft gekozen, wordt er een Dockerfile gegenereerd en de container \glspl{image} worden bewaard op \acrfull{ecr}.
 Ook wordt er een \emph{manifest} bestand aangemaakt, deze bevat configuratie parameters voor de service zoals hoeveelheid geheugen, CPU, het aantal kopieën van de service en andere~\autocite{Karakus2022}.
 
 \subsubsection{Jobs}
@@ -169,22 +169,22 @@ Daarnaast wordt er ook een \emph{manifest} bestand voorzien waar geavanceerde co
 
 Een \acrfull{cd} pipeline kan worden opgezet via Copilot.
 Copilot is compatibel met de volgende git repositories: GitHub, BitBucket en CodeCommit.
-Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container image op \acrshort{ecr} en begint de inzet naar een omgeving~\autocite{Karakus2022}.
+Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container ~\gls{image} op ~\acrshort{ecr} en begint de inzet naar een omgeving~\autocite{Karakus2022}.
 
 \subsection{AWS Elastic Beanstalk}
 \label{subsec:service-elastic-beanstalk}
 
-\acrfull{eb} is een andere \acrshort{aws} service die het inzetten van toepassingen op AWS-infrastructuur aanzienlijk vereenvoudigt.
+~\acrfull{eb} is een andere \acrshort{aws} service die het inzetten van toepassingen op AWS-infrastructuur aanzienlijk vereenvoudigt.
 Het beheer van AWS-infrastructuur wordt grotendeels door \acrshort{eb} uitgevoerd.
 Echter verliest de gebruiker de mogelijkheid om configuratiekeuzen te maken niet.
 
-\acrlong{eb} ondersteunt toepassingen ontwikkeld in Go, Java, .NET, Node.js, PHP, Python en Ruby.
+~\acrlong{eb} ondersteunt toepassingen ontwikkeld in Go, Java, .NET, Node.js, PHP, Python en Ruby.
 Wanneer een toepassing wordt ingezet, bouwt \acrshort{eb} de geselecteerd platform versie en voorziet de nodige AWS-resources.
 De gebruiker kan \acrlong{eb} gebruiken via de AWS \acrfull{cli}, of eb, een high-level \acrshort{cli} doelbewust voor \acrlong{eb} ontworpen.
 
 Bovendien is het ook mogelijk om via \acrshort{eb} alledaagse inzet gerelateerde taken uit te voeren.
 Zoals de grootte van de \acrshort{ec2} fleet instanties aanpassen of het monitoren van de toepassingen.
-Deze acties kunnen rechstreeks vanuit het \acrshort{eb} webinterface (console) uitgevoerd worden~\autocite{Khen2022a}.
+Deze acties kunnen rechtstreeks vanuit het \acrshort{eb} webinterface (console) uitgevoerd worden~\autocite{Khen2022a}.
 
 Het gebruik van \acrlong{eb} bedraagt geen bijkomende kosten.
 De gebruiker betaalt voor de AWS-resources die ingezet worden om de toepassing op AWS te hosten~\autocite{Khen2022a}.
@@ -245,11 +245,35 @@ In dat geval blijft de stack bestaan tot de systeemcomponenten succesvol verwijd
 \subsection{Terraform}
 \label{subsec:service-terraform}
 
+Terraform is een HashiCorp open-source ~\acrfull{iac} tool.
+Hashicorp is een Advanced Technology Partner bij ~\acrfull{apn} en ook een lid van de AWS DevOps Competency ~\autocite{Campbell2018}.
+Terraform is een gelijkaardige tool aan Cloudformation.
+Beide werken met declaratieve configuratie bestanden waarmee AWS-infrastructuur kan worden ingezet en geactualiseerd.
+
+Terraform is platform-agnostisch;
+de tool is compatibel met on-site servers of cloud servers zoals AWS, Google Cloud Platform, OpenStack en Azure.
+Het is mogelijk om meerdere cloud-leveranciers, voor verschillende doeleinden, te gebruiken.
+Dit betekent niet dat de gebruiker zonder gevolgen van cloud-leverancier kan schakelen.
+De cloud-providers hebben elk een andere werkmethodologie en aanbod.
+Dus dynamisch van cloud-provider veranderen is noch realistisch, noch efficiënt.
+Toch is het een voordeel om dezelfde configuratie syntax voor alle mogelijke integraties te kunnen gebruiken ~\autocite{Szalski2019}.
+
+Terraform werkt met configuratie bestanden zoals de meeste declaratieve \acrshort{iac} tools.
+Deze bestanden worden geschreven in ~\acrfull{hcl}, de configuratie taal van HashiCorp.
+De syntax heeft eigenschappen zoals variabelen en interpolatie, en de documentatie is zeer goed.
+In een Terraform configuratie bestand worden resources en data sources beschreven.
+Een resource vertegenwoordigt een component van de infrastructuur zoals een AWS ~\acrshort{ec2} instantie, een \acrshort{rds} instantie, een Route53 ~\acrshort{dns} record of een regel in een ~\gls{security-group}.
+Op deze manier kan de gebruiker de resources configureren en inzetten op de cloud architectuur~\autocite{Szalski2019}.
+
 \subsection{Ansible}
 \label{subsec:service-ansible}
 
+%TODO: literature Ansible
+
 \subsection{AWS SAM}
 \label{subsec:service-sam}
+
+%TODO: literature SAM
 
 \subsection{AWS CDK}
 \label{subsec:service-cdk}
@@ -304,3 +328,10 @@ Met behulp van de toolkit \acrshort{cli} kunnen alle functionaliteiten uitgevoer
 
 \subsection{Troposphere}
 \label{sec:service-troposphere}
+
+%TODO: literature Troposphere
+
+\subsection{Pulumi}
+\label{sec:service-pulumi}
+
+%TODO: literature Pulumi
