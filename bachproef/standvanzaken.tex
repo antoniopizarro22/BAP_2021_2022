@@ -10,7 +10,7 @@ De code moet een consistent en repliceerbaar resultaat leveren die automatisatie
 \subsection{AWS AppRunner}
 \label{sec:service-apprunner}
 
-AppRunner is een AWS-service die de functionaliteit verschaft om broncode of een container image te deployen op een snelle, simpele en kostefficiënte manier.
+AppRunner is een AWS-service die de functionaliteit verschaft om broncode of een container image te inzetten op een snelle, simpele en kostefficiënte manier.
 De toepassing wordt op een schaalbare en veilige AWS-cloud omgeving opgezet.
 De gebruiker hoeft de configuratie van AWS-resources niet zelf in handen te nemen, alle achterliggende infrastructuur wordt door AppRunner beheerd~\autocite{Khen2022}.
 
@@ -18,7 +18,7 @@ In een artikel van \textcite{Aussems2021} beschrijft hij AWS AppRunner als een g
 Daarom is deze service bestemd voor ontwikkelaars die geen tijd willen besteden in de uitrol, configuratie of beheer van hun containertoepassingen.
 Ze hoeven enkel de broncode af te leveren, in de vorm van een code repository of een container image~\autocite{Khen2022}.
 
-Toepassingen die via AppRunner zijn gedeployed worden op container instanties geplaatst.
+Toepassingen die via AppRunner zijn ingezet, worden op container instanties geplaatst.
 Deze instanties verbruiken computer- en geheugenbronnen, waarvoor de gebruiker moet betalen.
 Het geheugen en vCPU worden bij het opzet van AppRunner bepaald en op basis daarvan wordt de kost per GB bepaald.
 De kosten omvatten aan de ene kant de systeembronnen van een bevoorraadde container instantie.
@@ -74,7 +74,7 @@ De Amplify \acrfull{cli} is een eendrachtig tool die het bouwen, integreren en b
 %Amplify Hosting provides a git-based workflow for hosting full-stack serverless web apps with continuous deployment.
 %This user guide provides the information you need to get started with Amplify Hosting.
 
-Amplify Hosting biedt een git-gebaseerde workflow aan voor het hosten van een full-stack serverless webtoepassing met continuous deployment(CD).
+Amplify Hosting biedt een git-gebaseerde workflow aan voor het hosten van een full-stack serverless webtoepassing met \acrfull{cd}).
 %TODO: verder uitleggen
 
 \subsubsection{Marktevaluatie}
@@ -102,7 +102,7 @@ Verder worden een aantal kenmerken van Lightsail uitgelicht.
 
 \begin{description}
     \item[Instances: ] Lightsail virtuele servers voor het hosten van toepassingen.
-    \item[Containers: ] Deployen van Docker containers via Lightsail.
+    \item[Containers: ] Inzetten van Docker containers via Lightsail.
     \item[Simplified load balancers: ] Vereenvoudigde load balancing functionaliteit.
     \item[Managed databases: ] Volledig geconfigureerde MySQL of PostgreSQL databanken.
     \item[Block and object storage: ] Schaalbaar block en object opslag op de AWS-cloud.
@@ -121,7 +121,7 @@ The Copilot \acrshort{cli} is a tool for developers to build, release, and opera
 Amazon \acrshort{ecs}, and AWS Fargate.
 From getting started, pushing to staging, and releasing to production, Copilot can help manage the entire lifecycle of your application development.
 
-AWS Copilot is een \acrfull{cli} voor ontwikkelaars die gecontaineriseerde toepassingen willen deployen op AWS-services zoals AWS AppRunner, AWS Elastic container service (ECS) en AWS Fargate.
+AWS Copilot is een \acrfull{cli} voor ontwikkelaars die gecontaineriseerde toepassingen willen inzetten op AWS-services zoals AWS AppRunner, AWS Elastic container service (ECS) en AWS Fargate.
 De volledige levenscyclus van de toepassing kan via Copilot worden beheerd.
 Componenten zoals omgevingen en services kunnen m.b.v.\ de tool worden geconfigureerd.
 Vervolgens worden de hoofdconcepten van Copilot uitgelicht~\autocite{Karakus2022}.
@@ -131,7 +131,7 @@ Vervolgens worden de hoofdconcepten van Copilot uitgelicht~\autocite{Karakus2022
 Een applicatie is een collectie van services en omgevingen.
 De applicatienaam is dan meestal een high-level beschrijving van het product.
 Bijvoorbeeld een applicatie met naam "Chat" kan twee services bevatten, "frontend" en "api".
-Verder kunnen de services gedeployed worden op een "test" en "production" omgeving~\autocite{Karakus2022}.
+Verder kunnen de services ingezet worden op een "test" en "production" omgeving~\autocite{Karakus2022}.
 
 \subsubsection{Environments}
 
@@ -140,7 +140,7 @@ Voordat de toepassing op een productieve omgeving kan worden vrijgesteld is het 
 Deze testomgeving is dan een weerspiegeling van wat er uiteindelijk in productie zal staan.
 
 Elke omgeving kan zijn eigen versie van een service bevatten.
-De optimale werkwijze zou zijn om, voordat een service gedeployed wordt op de productieomgeving, die eerst te testen op de testomgeving.
+De optimale werkwijze zou zijn om, voordat een service ingezet wordt op de productieomgeving, die eerst te testen op de testomgeving.
 
 Verder bestaat ook de mogelijkheid om een nieuwe service aan een bestaande omgeving toe te voegen.
 Elke omgeving bevat een set van AWS-resources die gedeeld wordt binnen die omgeving.
@@ -150,7 +150,7 @@ Een nieuwe service zou gebruik maken van deze gedeelde resources~\autocite{Karak
 \subsubsection{Services}
 
 Een service bestaat uit de code van de toepassing en alle ondersteunende infrastructuur die nodig is om de toepassing op AWS te kunnen hosten.
-De gebruiker kiest via de \acrshort{cli} welke type service wordt aangemaakt.
+De gebruiker kiest via de \acrshort{cli} welke type service moet worden aangemaakt.
 Afhankelijk van het type service worden de nodige AWS-resources bevoorraad.
 Ter illustratie, een gebruiker kan kiezen voor een service om trafiek van het internet te bedienen.
 Daarbij horen AWS-resources zoals een \acrfull{alb} en een \acrshort{ecs} service op AWS Fargate.
@@ -169,10 +169,25 @@ Daarnaast wordt er ook een \emph{manifest} bestand voorzien waar geavanceerde co
 
 Een \acrfull{cd} pipeline kan worden opgezet via Copilot.
 Copilot is compatibel met de volgende git repositories: GitHub, BitBucket en CodeCommit.
-Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container image op \acrshort{ecr} en begint de deploy naar een omgeving~\autocite{Karakus2022}.
+Wanneer een push wordt gedetecteerd, de pipeline bouwt de service, bewaart de container image op \acrshort{ecr} en begint de inzet naar een omgeving~\autocite{Karakus2022}.
 
 \subsection{AWS Elastic Beanstalk}
 \label{subsec:service-elastic-beanstalk}
+
+\acrfull{eb} is een andere \acrshort{aws} service die het inzetten van toepassingen op AWS-infrastructuur aanzienlijk vereenvoudigt.
+Het beheer van AWS-infrastructuur wordt grotendeels door \acrshort{eb} uitgevoerd.
+Echter verliest de gebruiker de mogelijkheid om configuratiekeuzen te maken niet.
+
+\acrlong{eb} ondersteunt toepassingen ontwikkeld in Go, Java, .NET, Node.js, PHP, Python en Ruby.
+Wanneer een toepassing wordt ingezet, bouwt \acrshort{eb} de geselecteerd platform versie en voorziet de nodige AWS-resources.
+De gebruiker kan \acrlong{eb} gebruiken via de AWS \acrfull{cli}, of eb, een high-level \acrshort{cli} doelbewust voor \acrlong{eb} ontworpen.
+
+Bovendien is het ook mogelijk om via \acrshort{eb} alledaagse inzet gerelateerde taken uit te voeren.
+Zoals de grootte van de \acrshort{ec2} fleet instanties aanpassen of het monitoren van de toepassingen.
+Deze acties kunnen rechstreeks vanuit het \acrshort{eb} webinterface (console) uitgevoerd worden~\autocite{Khen2022a}.
+
+Het gebruik van \acrlong{eb} bedraagt geen bijkomende kosten.
+De gebruiker betaalt voor de AWS-resources die ingezet worden om de toepassing op AWS te hosten~\autocite{Khen2022a}.
 
 \subsection{AWS Cloudformation}
 \label{subsec:service-cloudformation}
@@ -264,7 +279,7 @@ Bij het aanmaken van een Stack construct moet er verwezen naar een App construct
 
 \paragraph{Stack}
 
-Een stack is de eenheid van deployment voor AWS \acrshort{cdk}.
+Een stack is de eenheid van inzet voor AWS \acrshort{cdk}.
 Een \acrshort{cdk}-stack is gelijkwaardig aan een Cloudformation-stack en beschikt over dezelfde beperkingen.
 Alle AWS-resources die gedefinieerd worden binnen een stack worden als één geheel beschouwd.
 
@@ -278,11 +293,11 @@ Er bestaan ook meer complexe third-party constructs die beschikbaar gesteld word
 
 \paragraph{CDK-Toolkit}
 
-Met behulp van de toolkit \acrshort{cli} kunnen alle functionaliteiten uitgevoerd worden die nodig zijn om de applicatie en infrastructuur te kunnen deployen en beheren zoals:
+Met behulp van de toolkit \acrshort{cli} kunnen alle functionaliteiten uitgevoerd worden die nodig zijn om de applicatie en infrastructuur te kunnen inzetten en beheren zoals:
 
 \begin{description}
     \item[Synthesis:] De synth commando compileert de code en genereert een Cloudformation template.
-    \item[Deploy:] De deploy commando zal de stack deployen naar de geconfigureerde AWS-account, voor elke deploy wordt de code gesynthetiseerd.
+    \item[Deploy:] De deploy commando zal de stack inzetten naar de geconfigureerde AWS-account, voor elke inzet wordt de code gesynthetiseerd.
     \item[Diff:] De diff commando vergelijkt de laatste stack met de laatste gesynthetiseerde template, de output is een overzicht van de verschillen tussen de twee.
     \item[Destroy:] De destroy commando verwijdert de stack en de bijhorende AWS-resources, dit is gelijkwaardig aan het verwijderen van een Cloudformation stack.
 \end{description}
