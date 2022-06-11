@@ -11,27 +11,59 @@
 %% mogelijke manier toegepast hebt om een antwoord te vinden op de
 %% onderzoeksvraag.
 
-TODO Methodologie
-
-%TODO: verwijzen naar bronnen of zelf bepalen?
-%voor bepaalde criteria eigen waardering
-
+%TODO: verwijzen naar bronnen of zelf bepalen? voor bepaalde criteria eigen waardering
 %TODO: basiskennis voor de AWS-infra wordt in rekening gebracht
 
-De services en tools zullen op bepaalde criteria geëvalueerd worden.
-De criteria is grotendeels afhankelijk van het type onderneming, een startup, een KBO of een grote onderneming.
-Aan de hand van een vergelijkende studie wordt er bepaald welke tool in welke situatie het best wordt gebruikt.
+Dit onderzoek bestaat uit een literatuurstudie waarbij de verschillende~\acrfull{iac} services in kaart worden gebracht.
+In dit onderzoek wordt specifiek gekeken naar tools en services die compatibel zijn met~\acrshort{aws}.
+Het is dan ook geen verrassing dat de meeste services door~\acrshort{aws} zelf worden aangeboden.
+De literatuurstudie is te vinden in Hoofdstuk~\ref{sec:criteria-evaluatie}.
+
+In Hoofdstuk~\ref{ch:vergelijking} wordt de evaluatie en vergelijking gedaan van de eerder besproken~\arcshort{iac} tools.
+De criteria, als beschreven in Hoofdstuk~\ref{sec:criteria-evaluatie}, wordt toegepast op de volgende tools:
+
+\begin{itemize}
+    \item AWS AppRunner
+    \item AWS Amplify
+    \item AWS Lightsail
+    \item AWS Copilot
+    \item AWS Elastic Beanstalk
+    \item AWS Cloudformation
+    \item Terraform
+    \item Ansible
+    \item AWS SAM
+    \item AWS CDK
+    \item Troposphere
+    \item Pulumi
+\end{itemize}
+
+Om op de criteria te kunnen antwoorden wordt er gekeken naar verschillende bronnen:
+
+\begin{itemize}
+    \item Documentatie tools/services
+    \item Artikels geschreven door gebruikers
+    \item Startersgidsen
+\end{itemize}
+
+In Hoofdstuk~\ref{ch:business-case} wordt een business case uitgewerkt.
+De business case zal bestaan uit een aantal requirements waaraan de \acrshort{iac} tool moet voldoen.
+De tools die de business case werkelijk kunnen uitwerken, zonder uitbreidingen naar andere services, zullen geselecteerd worden.
+In Hoofdstuk~\ref{ch:uitwerking} wordt de business case uitgewerkt met de geselecteerde tools.
 
 % beschrijving criteria + literatuurstudie -> vergelijking ->  op basis van business case + criteria -> uitwerking
 
 \section{Criteria evaluatie}
 \label{sec:criteria-evaluatie}
 
+De services en tools zullen op bepaalde criteria geëvalueerd worden.
+De criteria is grotendeels afhankelijk van het type onderneming, een startup, een KBO of een grote onderneming.
+Aan de hand van een vergelijkende studie wordt er bepaald welke tool in welke situatie het best wordt gebruikt.
+
 \begin{enumerate}
     \item Initiële inzet
     \begin{itemize}
         \item Training
-        \item Set-up kost
+        \item Kost opzet
         \item Documentatie en/of support
     \end{itemize}
     \item Operationele effectiviteit
@@ -48,9 +80,9 @@ Aan de hand van een vergelijkende studie wordt er bepaald welke tool in welke si
         \item Ready-made (abstractieniveau)
         \item Cross-platform support
         \item Syntax
-        \item Open source
+        \item Open-source
     \end{itemize}
-    \item Total Cost of Ownership (TCO)
+    \item \acrfull{tco}
     \begin{itemize}
         \item Infrastructuur
         \item Support
@@ -95,16 +127,17 @@ De syntax is een factor die meespeelt bij tools waar het vertrekkende punt een t
 Als de code in een programmeertaal, die niet exclusief is voor die tool, is geschreven dan moet de code voldoen aan de regels van dat programmeertaal.
 Bepaalde tools beschikken over hun eigen syntax, andere gebruiken generieke bestandsformaten zoals JSON en YML.
 
-De Total cost of ownership(TCO) is een andere belangrijke factor.
+De~\acrfull{tco} is een andere belangrijke factor.
 Het budget waarover een onderneming beschikt zal ook meespelen bij de keuze van een IaC tool.
 Niet alle ondernemingen kunnen de kosten om een complexe tool te gebruiken verantwoorden, de expertise die nodig is om de tool in gebruik te nemen kan extra kosten betekenen.
 
-\section{Services en tools}
-\label{sec:services-tools}
-
-Er is een breed aanbod aan services en tools voor het opzetten van AWS-resources.
-De tools en services die verder besproken zullen worden variëren van interne AWS-services tot derde partij tools.
-De services en tools verschillen ook op vlak van complexiteit.
-Er zijn “fully managed” services die de configuratie van AWS-resources grotendeels of deels op zich nemen, de gebruiker
-kan eenvoudig toepassingen deployen en beheren zonder veel te moeten nadenken over de achterliggende resources.
+% TODO: herschrijven
+%\section{Services en tools}
+%\label{sec:services-tools}
+%
+%Er is een breed aanbod aan services en tools voor het opzetten van AWS-resources.
+%De tools en services die verder besproken zullen worden variëren van interne AWS-services tot derde partij tools.
+%De services en tools verschillen ook op vlak van complexiteit.
+%Er zijn fully-managed services die de configuratie van AWS-resources grotendeels of deels op zich nemen, de gebruiker
+%kan eenvoudig toepassingen inzetten en beheren zonder veel te moeten nadenken over de achterliggende resources.
 
