@@ -5,4 +5,131 @@
 \chapter{\IfLanguageName{dutch}{Vergelijking services en tools}{Comparison services and tools}}
 \label{ch:vergelijking}
 
-TODO
+In dit hoofdstuk worden de~\acrshort{iac} tools geëvalueerd en vergeleken op basis van de criteria in Hoofdstuk~\ref{sec:criteria-evaluatie}.
+De tools worden in drie categorieën verdeeld:
+
+\begin{itemize}
+    \item Declaratieve tools
+    \item Programmatieve tools
+    \item Intuïtieve/externe tools
+\end{itemize}
+
+% TODO: beschrijf de 3 categorieën
+Declaratieve tools
+
+
+\section{Initiële inzet}
+\label{subsec:eval-initiele-inzet}
+
+% Verdeling in 3 groepen declaratieve tools - CLI/wizard/ - programmatieve tools
+
+\begin{table}[h]
+    \label{tab:inzet-1}
+    \begin{tabular}{  l p{5cm} p{5cm} }
+        \toprule
+        \textbf{Tool/Service} & \textbf{Training} & \textbf{Kost} \\\midrule
+        AWS AppRunner &
+            {\small
+        De gebruiker moet een basis kennis hebben van AWS.
+        Een ontwikkelaar zou redelijk snel de tool in gebruik kunnen nemen zonder speciale trainingen.
+        } &
+            {\small
+        De kost voor een geprovisioneerde container instantie is \$ 0.007/GB-uur.
+        Voor een actieve container instantie is de kost \$ 0.064/vCPU-uur en \$ 0.007/GB-uur.
+        Daarnaast zijn er optionele add-ons en extra kosten als de toepassing andere AWS-services gebruikt.
+        } \\\hline
+        AWS Amplify &
+            {\small
+        TODO
+        } &
+            {\small
+        Voor het gebruik van de Amplify Framework (libraries, CLI, UI Components) betaalt de gebruiker enkel voor de onderliggende AWS-resources.
+        De kosten voor het hosten van een statische webtoepassing zijn de volgende:
+        \begin{itemize}
+            \item \$ 0.01 per build minuut
+            \item \$ 0.023 per GB per maand
+            \item \$ 0.15 per GB
+        \end{itemize}
+        Publieke SSL-certificaten inclusief.
+        } \\\hline
+        AWS Lightsail &
+            {\small
+        TODO
+        } &
+            {\small
+        Met Lightsail is de kost laag en voorspelbaar.
+        Deze service bundelt resources zoals geheugen, vCPU en SSD in een plan.
+        Alle plannen includeren een statisch IP-adres, \acrshort{dns}, \acrshort{ssh}-terminaal toegang, \acrshort{ssd}-opslag en monitoring.
+        } \\\hline
+        AWS Copilot &
+            {\small
+        TODO
+        } &
+            {\small
+        Er zijn geen kosten verbonden aan het gebruik van deze tool.
+        De gebruiker betaalt enkel voor de onderliggende AWS-resources.
+        } \\\hline
+        AWS Elastic Beanstalk &
+            {\small
+        TODO
+        } &
+            {\small
+        Er zijn geen kosten verbonden aan het gebruik van deze service.
+        De gebruiker betaalt enkel voor de onderliggende AWS-resources.
+        Het is aan de gebruiker om de grootte en het aantal AWS-resources te bepalen.
+        } \\\hline
+        \bottomrule
+    \end{tabular}
+    \caption{Initiële inzet test}
+\end{table}
+
+\begin{table}[h]
+    \label{tab:inzet-2}
+    \begin{tabular}{  l p{3.4cm}  p{3.4cm} p{3.4cm} }
+        \toprule
+        \textbf{Tool}      & \textbf{Documentatie} & \textbf{Training} & \textbf{Kost} \\\midrule
+        AWS Cloudformation & test                  & test              & test          \\\hline
+        AWS Terraform      & test                  & test              & test          \\\hline
+        AWS SAM            & test                  & test              & test          \\\hline
+        \bottomrule
+    \end{tabular}
+    \caption{Initiële inzet declaratieve tools}
+\end{table}
+
+\begin{table}[h]
+    \label{tab:inzet-3}
+    \begin{tabular}{  l p{3.4cm}  p{3.4cm} p{3.4cm} }
+        \toprule
+        \textbf{Tool} & \textbf{Documentatie} & \textbf{Training} & \textbf{Kost} \\\midrule
+        AWS CDK       & test                  & test              & test          \\\hline
+        Troposphere   & test                  & test              & test          \\\hline
+        Pulumi        & test                  & test              & test          \\\hline
+        \bottomrule
+    \end{tabular}
+    \caption{Initiële inzet programmatieve tools}
+\end{table}
+
+
+%\paragraph{Initiële inzet}
+%
+%\paragraph{Operationele effectiviteit}
+%
+%\paragraph{Gebruiksgemak}
+%
+%\paragraph{\acrfull{tco}}
+%
+%\paragraph{Flexibiliteit}
+%
+%
+%\section{AWS Amplify}
+%\label{subsec:eval-service-amplify}
+%
+%\paragraph{Initiële inzet}
+%
+%\paragraph{Operationele effectiviteit}
+%
+%\paragraph{Gebruiksgemak}
+%
+%\paragraph{\acrfull{tco}}
+%
+%\paragraph{Flexibiliteit}
