@@ -10,126 +10,324 @@ De tools worden in drie categorieën verdeeld:
 
 \begin{itemize}
     \item Declaratieve tools
-    \item Programmatieve tools
-    \item Intuïtieve/externe tools
+    \item Tools gebaseerd op programmeertalen
+    \item Interactieve tools
 \end{itemize}
 
 % TODO: beschrijf de 3 categorieën
-Declaratieve tools
 
 
-\section{Initiële inzet}
-\label{subsec:eval-initiele-inzet}
+\section{Interactieve tools}
+\label{sec:interactieve-tools}
+
+Een Vereenvoudiging service of tool is een intuïtieve console of een \acrshort{cli} die het hosten van toepassingen op AWS-infrastructuur of het opzetten van AWS-resources aanzienlijk vereenvoudigt.
+De volgende tools en services bijhoren tot deze categorie:
+
+\begin{itemize}
+    \item AWS AppRunner
+    \item AWS Amplify
+    \item AWS Lightsail
+    \item AWS Copilot
+    \item AWS Elastic Beanstalk
+\end{itemize}
+
+\subsection{Initiële inzet}
+\label{subsec:initiële-inzet-ver}
+
+Om deze tools te gebruiken is een basis kennis van cloud-infrastructuur (\acrshort{aws}) voldoende.
+De gebruiker is meestal een ontwikkelaar die een toepassing op AWS wilt inzetten en het cloud-infrastructuur aspect wenst te beperken.
+Bovendien zijn deze tools zo opgesteld, dat de gebruiker op een intuïtieve manier mee kan werken.
+Daarom zijn speciale trainingen of opleidingen om deze tools in gebruik te nemen overbodig.
+
+De documentatie is heel
+
+\begin{table}[h!]
+    \centering
+    \caption{Interactieve tools - Initiële inzet}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c |}
+            \hline
+            \multicolumn{4}{|c|}{Initiële inzet} \\
+            \hline
+            Tool                  & Documentatie & Training & Kost \\
+            \hline
+            AWS AppRunner         & +            & +        & +    \\\hline
+            AWS Amplify           & +            & +        & +    \\\hline
+            AWS Lightsail         & +            & +        & +    \\\hline
+            AWS Copilot           & +            & +        & +    \\\hline
+            AWS Elastic Beanstalk & +            & +        & +    \\\hline
+        \end{tabular}
+        \label{tab:inter-tools-inzet}
+    }
+\end{table}
+
+\subsection{Operationele effectiviteit}
+\label{subsec:operationele-eff-ver}
+
+
+\begin{table}[h]
+    \centering
+    \caption{Interactieve tools - Operationele effectiviteit}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c | c | c |}
+            \hline
+            \multicolumn{6}{|c|}{Operationele effectiviteit} \\
+            \hline
+            Tool                  & Procesfuncties & Maturiteit & Onderhoudbaarheid & Veiligheid & Categorisatie \\
+            \hline
+            AWS AppRunner         & +              & +          & +                 & +          & +             \\\hline
+            AWS Amplify           & +              & +          & +                 & +          & +             \\\hline
+            AWS Lightsail         & +              & +          & +                 & +          & +             \\\hline
+            AWS Copilot           & +              & +          & +                 & +          & +             \\\hline
+            AWS Elastic Beanstalk & +              & +          & +                 & +          & +             \\\hline
+        \end{tabular}
+        \label{tab:inter-tools-op}
+    }
+\end{table}
+
+\subsection{Gebruiksgemak}
+\label{subsec:gebruiksgemak-ver}
+
+\begin{table}[h]
+    \centering
+    \caption{Interactieve tools - Gebruiksgemak}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c | c | c |}
+            \hline
+            \multicolumn{6}{|c|}{Gebruiksgemak} \\
+            \hline
+            Tool                  & Herbruikbaarheid & Ready-made & Cross-platform & Syntax & Open-source \\
+            \hline
+            AWS AppRunner         & +                & +          & +              & +      & +           \\\hline
+            AWS Amplify           & +                & +          & +              & +      & +           \\\hline
+            AWS Lightsail         & +                & +          & +              & +      & +           \\\hline
+            AWS Copilot           & +                & +          & +              & +      & +           \\\hline
+            AWS Elastic Beanstalk & +                & +          & +              & +      & +           \\\hline
+        \end{tabular}
+        \label{tab:inter-tools-gebruik}
+    }
+\end{table}
+
+\subsection{Flexibiliteit}
+\label{subsec:flexibiliteit-ver}
+
+TEXT TEXT TEXT TEXT
+
+\begin{table}[h!]
+    \centering
+    \caption{Interactieve tools - Flexibiliteit}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c | c |}
+            \hline
+            \multicolumn{5}{|c|}{Flexibiliteit met} \\
+            \hline
+            Tool                  & Bestaande omgeving & IaC tools & DevOps tools & Development frameworks \\
+            \hline
+            AWS AppRunner         & +                  & +         & +            & +                      \\\hline
+            AWS Amplify           & +                  & +         & +            & +                      \\\hline
+            AWS Lightsail         & +                  & +         & +            & +                      \\\hline
+            AWS Copilot           & +                  & +         & +            & +                      \\\hline
+            AWS Elastic Beanstalk & +                  & +         & +            & +                      \\\hline
+        \end{tabular}
+        \label{tab:inter-tools-flex}
+    }
+\end{table}
+
+
+\section{Tools gebaseerd op programmeertalen}
+\label{sec:programmatieve-tools}
+
+TEXT TEXT
+
+\begin{itemize}
+    \item AWS CDK
+    \item Troposphere
+    \item Pulumi
+\end{itemize}
+
+\subsection{Initiële inzet}
+\label{subsec:initiële-inzet-pro-decl}
+
+\begin{table}[h!]
+    \centering
+    \caption{Tools gebaseerd op programmeertalen - Flexibiliteit}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c |}
+            \hline
+            \multicolumn{4}{|c|}{Initiële inzet} \\
+            \hline
+            Tool        & Documentatie & Training & Kost \\
+            \hline
+            AWS CDK     & +            & +        & +    \\\hline
+            Troposphere & +            & +        & +    \\\hline
+            Pulumi      & +            & +        & +    \\\hline
+        \end{tabular}
+        \label{tab:pro-tools-inzet}
+    }
+\end{table}
+
+\subsection{Operationele effectiviteit}
+\label{subsec:operationele-eff-pro}
+
+\begin{table}[h!]
+    \centering
+    \caption{Tools gebaseerd op programmeertalen - Operationele effectiviteit}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c | c | c |}
+            \hline
+            \multicolumn{6}{|c|}{Operationele effectiviteit} \\
+            \hline
+            Tool                  & Procesfuncties & Maturiteit & Onderhoudbaarheid & Veiligheid & Categorisatie \\
+            \hline
+            AWS AppRunner         & +              & +          & +                 & +          & +             \\\hline
+            AWS Amplify           & +              & +          & +                 & +          & +             \\\hline
+            AWS Lightsail         & +              & +          & +                 & +          & +             \\\hline
+            AWS Copilot           & +              & +          & +                 & +          & +             \\\hline
+            AWS Elastic Beanstalk & +              & +          & +                 & +          & +             \\\hline
+        \end{tabular}
+        \label{tab:pro-tools-op}
+    }
+\end{table}
+
+\subsection{Gebruiksgemak}
+\label{subsec:gebruiksgemak-pro}
+
+\begin{table}[h!]
+    \centering
+    \caption{Tools gebaseerd op programmeertalen - Gebruiksgemak}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c | c | c |}
+            \hline
+            \multicolumn{6}{|c|}{Gebruiksgemak} \\
+            \hline
+            Tool                  & Herbruikbaarheid & Ready-made & Cross-platform & Syntax & Open-source \\
+            \hline
+            AWS AppRunner         & +                & +          & +              & +      & +           \\\hline
+            AWS Amplify           & +                & +          & +              & +      & +           \\\hline
+            AWS Lightsail         & +                & +          & +              & +      & +           \\\hline
+            AWS Copilot           & +                & +          & +              & +      & +           \\\hline
+            AWS Elastic Beanstalk & +                & +          & +              & +      & +           \\\hline
+        \end{tabular}
+        \label{tab:pro-tools-gebruik}
+    }
+\end{table}
+
+\subsection{Flexibiliteit}
+\label{subsec:flexibiliteit-pro}
+
+\begin{table}[h!]
+    \centering
+    \caption{Tools gebaseerd op programmeertalen - Flexibiliteit}
+    \makebox[\linewidth]{
+        \begin{tabular}{| c || c | c | c | c |}
+            \hline
+            \multicolumn{5}{|c|}{Flexibiliteit met} \\
+            \hline
+            Tool                  & Bestaande omgeving & IaC tools & DevOps tools & Development frameworks \\
+            \hline
+            AWS AppRunner         & +                  & +         & +            & +                      \\\hline
+            AWS Amplify           & +                  & +         & +            & +                      \\\hline
+            AWS Lightsail         & +                  & +         & +            & +                      \\\hline
+            AWS Copilot           & +                  & +         & +            & +                      \\\hline
+            AWS Elastic Beanstalk & +                  & +         & +            & +                      \\\hline
+        \end{tabular}
+        \label{tab:pro-tools-flex}
+    }
+\end{table}
+
+
+\section{Declaratieve tools}
+\label{sec:declaratieve-tools}
+
+\begin{itemize}
+    \item AWS Cloudformation
+    \item AWS SAM
+    \item Terraform
+    \item Ansible
+\end{itemize}
+
+\subsection{Initiële inzet}
+\label{subsec:initiële-inzet-decl}
+
+\subsection{Operationele effectiviteit}
+\label{subsec:operationele-eff-decl}
+
+\subsection{Gebruiksgemak}
+\label{subsec:gebruiksgemak-decl}
+
+\subsection{Flexibiliteit}
+\label{subsec:flexibiliteit-decl}
+
 
 % Verdeling in 3 groepen declaratieve tools - CLI/wizard/ - programmatieve tools
 
-\begin{table}[h]
-    \label{tab:inzet-1}
-    \begin{tabular}{  l p{5cm} p{5cm} }
-        \toprule
-        \textbf{Tool/Service} & \textbf{Training} & \textbf{Kost} \\\midrule
-        AWS AppRunner &
-            {\small
-        De gebruiker moet een basis kennis hebben van AWS.
-        Een ontwikkelaar zou redelijk snel de tool in gebruik kunnen nemen zonder speciale trainingen.
-        } &
-            {\small
-        De kost voor een geprovisioneerde container instantie is \$ 0.007/GB-uur.
-        Voor een actieve container instantie is de kost \$ 0.064/vCPU-uur en \$ 0.007/GB-uur.
-        Daarnaast zijn er optionele add-ons en extra kosten als de toepassing andere AWS-services gebruikt.
-        } \\\hline
-        AWS Amplify &
-            {\small
-        TODO
-        } &
-            {\small
-        Voor het gebruik van de Amplify Framework (libraries, CLI, UI Components) betaalt de gebruiker enkel voor de onderliggende AWS-resources.
-        De kosten voor het hosten van een statische webtoepassing zijn de volgende:
-        \begin{itemize}
-            \item \$ 0.01 per build minuut
-            \item \$ 0.023 per GB per maand
-            \item \$ 0.15 per GB
-        \end{itemize}
-        Publieke SSL-certificaten inclusief.
-        } \\\hline
-        AWS Lightsail &
-            {\small
-        TODO
-        } &
-            {\small
-        Met Lightsail is de kost laag en voorspelbaar.
-        Deze service bundelt resources zoals geheugen, vCPU en SSD in een plan.
-        Alle plannen includeren een statisch IP-adres, \acrshort{dns}, \acrshort{ssh}-terminaal toegang, \acrshort{ssd}-opslag en monitoring.
-        } \\\hline
-        AWS Copilot &
-            {\small
-        TODO
-        } &
-            {\small
-        Er zijn geen kosten verbonden aan het gebruik van deze tool.
-        De gebruiker betaalt enkel voor de onderliggende AWS-resources.
-        } \\\hline
-        AWS Elastic Beanstalk &
-            {\small
-        TODO
-        } &
-            {\small
-        Er zijn geen kosten verbonden aan het gebruik van deze service.
-        De gebruiker betaalt enkel voor de onderliggende AWS-resources.
-        Het is aan de gebruiker om de grootte en het aantal AWS-resources te bepalen.
-        } \\\hline
-        \bottomrule
-    \end{tabular}
-    \caption{Initiële inzet test}
-\end{table}
+%\begin{table}[h]
+%    \label{tab:inzet-2}
+%    \begin{tabular}{  l p{3.4cm}  p{3.4cm} p{3.4cm} }
+%        \toprule
+%        \textbf{Tool}      & \textbf{Documentatie} & \textbf{Training} & \textbf{Kost} \\\midrule
+%        AWS Cloudformation & test                  & test              & test          \\\hline
+%        AWS Terraform      & test                  & test              & test          \\\hline
+%        AWS SAM            & test                  & test              & test          \\\hline
+%        \bottomrule
+%    \end{tabular}
+%    \caption{Initiële inzet declaratieve tools}
+%\end{table}
+%
+%\begin{table}[h]
+%    \label{tab:inzet-3}
+%    \begin{tabular}{  l p{3.4cm}  p{3.4cm} p{3.4cm} }
+%        \toprule
+%        \textbf{Tool} & \textbf{Documentatie} & \textbf{Training} & \textbf{Kost} \\\midrule
+%        AWS CDK       & test                  & test              & test          \\\hline
+%        Troposphere   & test                  & test              & test          \\\hline
+%        Pulumi        & test                  & test              & test          \\\hline
+%        \bottomrule
+%    \end{tabular}
+%    \caption{Initiële inzet programmatieve tools}
+%\end{table}
 
-\begin{table}[h]
-    \label{tab:inzet-2}
-    \begin{tabular}{  l p{3.4cm}  p{3.4cm} p{3.4cm} }
-        \toprule
-        \textbf{Tool}      & \textbf{Documentatie} & \textbf{Training} & \textbf{Kost} \\\midrule
-        AWS Cloudformation & test                  & test              & test          \\\hline
-        AWS Terraform      & test                  & test              & test          \\\hline
-        AWS SAM            & test                  & test              & test          \\\hline
-        \bottomrule
-    \end{tabular}
-    \caption{Initiële inzet declaratieve tools}
-\end{table}
-
-\begin{table}[h]
-    \label{tab:inzet-3}
-    \begin{tabular}{  l p{3.4cm}  p{3.4cm} p{3.4cm} }
-        \toprule
-        \textbf{Tool} & \textbf{Documentatie} & \textbf{Training} & \textbf{Kost} \\\midrule
-        AWS CDK       & test                  & test              & test          \\\hline
-        Troposphere   & test                  & test              & test          \\\hline
-        Pulumi        & test                  & test              & test          \\\hline
-        \bottomrule
-    \end{tabular}
-    \caption{Initiële inzet programmatieve tools}
-\end{table}
-
-
-%\paragraph{Initiële inzet}
-%
-%\paragraph{Operationele effectiviteit}
-%
-%\paragraph{Gebruiksgemak}
-%
-%\paragraph{\acrfull{tco}}
-%
-%\paragraph{Flexibiliteit}
-%
-%
-%\section{AWS Amplify}
-%\label{subsec:eval-service-amplify}
-%
-%\paragraph{Initiële inzet}
-%
-%\paragraph{Operationele effectiviteit}
-%
-%\paragraph{Gebruiksgemak}
-%
-%\paragraph{\acrfull{tco}}
-%
-%\paragraph{Flexibiliteit}
+%\begin{table}[h]
+%    \label{tab:inzet-1}
+%    \begin{tabular}{ l p{10cm} }
+%        \toprule
+%        \textbf{Tool/Service} & \textbf{Kost} \\\midrule
+%        AWS AppRunner &
+%            {\small
+%        De kost voor een geprovisioneerde container instantie is \$ 0.007/GB-uur.
+%        Voor een actieve container instantie is de kost \$ 0.064/vCPU-uur en \$ 0.007/GB-uur.
+%        Daarnaast zijn er optionele add-ons en extra kosten als de toepassing andere AWS-services gebruikt.
+%        } \\\hline
+%        AWS Amplify &
+%            {\small
+%        Voor het gebruik van de Amplify Framework (libraries, CLI, UI Components) betaalt de gebruiker enkel voor de onderliggende AWS-resources.
+%        De kosten voor het hosten van een statische webtoepassing zijn de volgende:
+%        \begin{itemize}
+%            \item \$ 0.01 per build minuut
+%            \item \$ 0.023 per GB per maand
+%            \item \$ 0.15 per GB
+%        \end{itemize}
+%        Publieke SSL-certificaten inclusief.
+%        } \\\hline
+%        AWS Lightsail &
+%            {\small
+%        Met Lightsail is de kost laag en voorspelbaar.
+%        Deze service bundelt resources zoals geheugen, vCPU en SSD in een plan.
+%        Alle plannen includeren een statisch IP-adres, \acrshort{dns}, \acrshort{ssh}-terminaal toegang, \acrshort{ssd}-opslag en monitoring.
+%        } \\\hline
+%        AWS Copilot &
+%            {\small
+%        Er zijn geen kosten verbonden aan het gebruik van deze tool.
+%        De gebruiker betaalt enkel voor de onderliggende AWS-resources.
+%        } \\\hline
+%        AWS Elastic Beanstalk &
+%            {\small
+%        Er zijn geen kosten verbonden aan het gebruik van deze service.
+%        De gebruiker betaalt enkel voor de onderliggende AWS-resources.
+%        Het is aan de gebruiker om de grootte en het aantal AWS-resources te bepalen.
+%        } \\\hline
+%        \bottomrule
+%    \end{tabular}
+%    \caption{Vereenvoudiging tools: initiële inzet - kost}
+%    \label{tab:inzet-kost-ver}
+%\end{table}
