@@ -29,7 +29,7 @@ Het is heel eenvoudig om een AppRunner toepassing tijdelijk te stoppen en terug 
 Deze acties kunnen via de console, \acrshort{cli} of \acrshort{api} uitgevoerd worden~\autocite{AWSAppRunnerPricing}.
 
 %marktbevindingen
-\subsection{Marktevaluatie}
+\paragraph{Marktevaluatie}
 
 %https://financesonline.com/news/building-saas-on-aws-now-faster-with-ga-release-of-low-code-tool-amplify-studio/
 %https://bejamas.io/discovery/hosting/aws-amplify/
@@ -48,7 +48,7 @@ Integratie met backend componenten wordt mogelijk gemaakt via serverless technol
 
 Vervolgens worden de door Amplify aangeboden tools verder uitgelicht.
 
-\subsection{Amplify libraries}
+\paragraph{Amplify libraries}
 
 De Amplify open-source client libraries voorzien use-case gebaseerde, declaratieve en gemakkelijk te gebruiken interfaces
 doorheen verschillende categorieën van cloud ondersteunende operaties.
@@ -56,20 +56,20 @@ Deze stellen mobiele en web ontwikkelaars in staat om integraties met hun backen
 De libraries worden ondersteund door de AWS-cloud en bieden een inplugbaar model aan, dat ook door andere cloud leveranciers kan worden gebruikt.
 Verder kunnen de libraries gebruikt worden met beide, nieuwe backend aangemaakt via de Amplify \acrshort{cli} en bestaande backend bronnen~\autocite{AWSAmplifyDocs}.
 
-\subsection{Amplify Studio}
+\paragraph{Amplify Studio}
 
 AWS Amplify Studio is een visuele ontwikkeling omgeving voor het bouwen van full-stack web en mobiele toepassingen.
 Studio bouwt verder op bestaande backend-bouw mogelijkheden in AWS Simplify, UI-ontwikkeling wordt aanzienlijk versneld.
 Met Studio is het mogelijk om een webtoepassing in zijn geheel te bouwen, front-to-back, met minimale codeer werk.
 En toch behoudt de gebruiker volledige controle over de toepassing ontwerp en gedrag via code~\autocite{AWSAmplifyDocs}.
 
-\subsection{Amplify \acrshort{cli}}
+\paragraph{Amplify \acrshort{cli}}
 
 %The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app.
 De Amplify \acrfull{cli} is een eendrachtig tool die het bouwen, integreren en beheren van AWS-services voor een toepassing faciliteert~\autocite{AWSAmplifyDocs}.
 %TODO: verder uitleggen
 
-\subsection{Amplify Hosting}
+\paragraph{Amplify Hosting}
 
 %Amplify Hosting provides a git-based workflow for hosting full-stack serverless web apps with continuous deployment.
 %This user guide provides the information you need to get started with Amplify Hosting.
@@ -77,7 +77,7 @@ De Amplify \acrfull{cli} is een eendrachtig tool die het bouwen, integreren en b
 Amplify Hosting biedt een git-gebaseerde workflow aan voor het hosten van een full-stack serverless webtoepassing met \acrfull{cd}).
 %TODO: verder uitleggen
 
-\subsection{Marktevaluatie}
+\paragraph{Marktevaluatie}
 
 %https://financesonline.com/news/building-saas-on-aws-now-faster-with-ga-release-of-low-code-tool-amplify-studio/
 %https://bejamas.io/discovery/hosting/aws-amplify/
@@ -109,7 +109,7 @@ Verder worden een aantal kenmerken van Lightsail uitgelicht.
     \item[CDN distributions: ] \acrfull{cdn} voor de globale distributie van toepassingen.
 \end{description}
 
-\subsection{Marktevaluatie}
+\paragraph{Marktevaluatie}
 
 In een blog van \textcite{Warrier2022} beschrijft hij Lightsail als een gemakkelijke tool om eenvoudige workloads te beheren
 en voorgeconfigureerde infrastructuur, zoals toepassingen, databanken en andere populaire stacks, te provisioneren.
@@ -122,14 +122,14 @@ De volledige levenscyclus van de toepassing kan via Copilot worden beheerd.
 Componenten zoals omgevingen en services kunnen m.b.v.\ de tool worden geconfigureerd.
 Vervolgens worden de hoofdconcepten van Copilot uitgelicht~\autocite{Karakus2022}.
 
-\subsection{Applications}
+\paragraph{Applications}
 
 Een applicatie is een collectie van services en omgevingen.
 De applicatienaam is dan meestal een high-level beschrijving van het product.
 Bijvoorbeeld een applicatie met naam "Chat" kan twee services bevatten, "frontend" en "api".
 Verder kunnen de services ingezet worden op een "test" en "production" omgeving~\autocite{Karakus2022}.
 
-\subsection{Environments}
+\paragraph{Environments}
 
 Het concept van omgevingen is door iedere ontwikkelaar gekend.
 Voordat de toepassing op een productieve omgeving kan worden vrijgesteld is het aangeraden om eerst een test omgeving te voorzien.
@@ -143,7 +143,7 @@ Elke omgeving bevat een set van AWS-resources die gedeeld wordt binnen die omgev
 Deze omvatten netwerk-resources, de \acrshort{ecs}-cluster en de load-balancer.
 Een nieuwe service zou gebruik maken van deze gedeelde resources~\autocite{Karakus2022}.
 
-\subsection{Services}
+\paragraph{Services}
 
 Een service bestaat uit de code van de toepassing en alle ondersteunende infrastructuur die nodig is om de toepassing op AWS te kunnen hosten.
 De gebruiker kiest via de \acrshort{cli} welke type service moet worden aangemaakt.
@@ -154,14 +154,14 @@ Daarbij horen AWS-resources zoals een \acrfull{alb} en een \acrshort{ecs} servic
 Als de gebruiker een service type heeft gekozen, wordt er een Dockerfile gegenereerd en de container \glspl{image} worden bewaard op \acrfull{ecr}.
 Ook wordt er een \emph{manifest} bestand aangemaakt, deze bevat configuratie parameters voor de service zoals hoeveelheid geheugen, CPU, het aantal kopieën van de service en andere~\autocite{Karakus2022}.
 
-\subsection{Jobs}
+\paragraph{Jobs}
 
 Jobs zijn vluchtig ECS tasks die getriggerd worden door een event.
 Wanneer een job voldaan is, wordt de \acrshort{ecs} task beëindigd.
 De gebruiker dient alle nodige configuratie te voorzien voor de opzet van de \acrshort{ecs} task.
 Daarnaast wordt er ook een \emph{manifest} bestand voorzien waar geavanceerde configuratie kan worden ingesteld~\autocite{Karakus2022}.
 
-\subsection{Pipelines}
+\paragraph{Pipelines}
 
 Een \acrfull{cd} pipeline kan worden opgezet via Copilot.
 Copilot is compatibel met de volgende git repositories: GitHub, BitBucket en CodeCommit.
@@ -197,7 +197,7 @@ Voor infrastructuur en AWS-resources die via Cloudformation zijn opgezet bestaat
 Een alternatief is om bestaande infrastructuurcomponenten in een Cloudformation stack te opnemen.
 Daarnaast biedt Cloudformation ook de functionaliteit aan om infrastructuur eenvoudig af te bouwen~\autocite{Mansoor2014}.
 
-\subsection{Template}
+\paragraph{Template}
 
 Cloudformation werkt op basis van templates.
 Een template is een JSON- of YAML-bestand waarin de gewenste AWS-resources en configuratie worden beschreven.
@@ -208,7 +208,7 @@ Templates kunnen ook dynamisch geïmplementeerd worden door gebruik te maken van
 Deze parameters worden gespecifieerd bij het aanmaken of actualiseren van een stack.
 Zo wordt er vermeden om telkens opnieuw de template te moeten aanpassen~\autocite{AWSCLoudformationUser}.
 
-\subsection{Stack}
+\paragraph{Stack}
 
 Een Cloudformation stack is een collectie van AWS-resources die beheerd kunnen worden als één geheel.
 De stack wordt aangemaakt op basis van een Cloudformation template.
@@ -217,7 +217,7 @@ Anders bestaat ook de mogelijkheid om default waarden in te stellen voor de para
 Nadat een stack is aangemaakt kan die geactualiseerd worden a.d.h.v.\ change-sets.
 De aangemaakte resources kunnen eenvoudig afgebouwd worden door de stack te verwijderen~\autocite{AWSCLoudformationUser}.
 
-\subsection{Change set}
+\paragraph{Change set}
 
 De resources van een bestaande stack kunnen aangepast worden via een change set.
 Daarvoor moet één of beide van de volgende acties uitgevoerd worden:
@@ -231,7 +231,7 @@ Een change set is de vergelijking van de huidige template t.o.v.\ de aangepaste 
 In de change set worden de voorgestelde aanpassingen opgesomd.
 Eens goedgekeurd worden de resources voor die stack bijgewerkt~\autocite{AWSCLoudformationUser}.
 
-\subsection{Delete stack}
+\paragraph{Delete stack}
 
 Bij het verwijderen van een stack worden de betreffende AWS-resources afgebouwd.
 Het is mogelijk om bepaalde resources niet te verwijderen door een “deletion policy” te configureren waarbij de gewenste resources behouden blijven.
